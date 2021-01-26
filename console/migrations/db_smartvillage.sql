@@ -743,7 +743,7 @@ INSERT INTO `sumber_dana_pembangunan` (`id`, `nama`, `created_at`, `updated_at`)
 --
 -- Table structure for table `user`
 --
-
+DROP TABLE `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `roles_id` int(11) NOT NULL,
