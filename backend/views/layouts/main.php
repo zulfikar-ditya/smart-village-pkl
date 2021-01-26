@@ -1,80 +1,74 @@
 <?php
+use yii\helpers\Html;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use backend\assets\AppAsset;
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
 
-AppAsset::register($this);
-?>
-<?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php $this->registerCsrfMetaTags() ?>
-    <title>Admin Smart Village - <?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-</head>
-<body>
-<?php $this->beginBody() ?>
+if (Yii::$app->controller->action->id === 'login') { 
+/**
+ * Do not use this code in your template. Remove it. 
+ * Instead, use the code  $this->layout = '//main-login'; in your controller.
+ */
+    echo $this->render(
+        'main-login',
+        ['content' => $content]
+    );
+} else {
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
+    backend\assets\AppAsset::register($this);
+
+    dmstr\web\AdminLteAsset::register($this);
+
+    $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
     ?>
+    <?php $this->beginPage() ?>
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>">
+    <head>
+        <meta charset="<?= Yii::$app->charset ?>"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?= Html::csrfMetaTags() ?>
+        <title>Admin Smart Village <?= Html::encode($this->title) ?></title>
+        <?php $this->head() ?>
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Oxygen', sans-serif;
+            }
+        </style>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body class="hold-transition skin-purple sidebar-mini">
+    <?php $this->beginBody() ?>
+    <div class="wrapper">
+
+        <?= $this->render(
+            'header.php',
+            ['directoryAsset' => $directoryAsset]
+        ) ?>
+
+        <?= $this->render(
+            'left.php',
+            ['directoryAsset' => $directoryAsset]
+        )
+        ?>
+        
+        <?= $this->render(
+            'content.php',
+            ['content' => $content, 'directoryAsset' => $directoryAsset]
+        ) ?>
+
     </div>
-</div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
-
-<?php $this->endBody() ?>
-</body>
-</html>
-<?php $this->endPage() ?>
+    <?php $this->endBody() ?>
+    </body>
+    </html>
+    <?php $this->endPage() ?>
+<?php } ?>

@@ -22,6 +22,18 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oxygen', sans-serif;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php $this->beginBody() ?>

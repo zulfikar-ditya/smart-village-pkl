@@ -6,6 +6,10 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\Pembangunan;
+use common\models\user;
+use common\models\RtRw;
+use common\models\dusun;
 
 /**
  * Site controller
@@ -60,7 +64,21 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $user = User::find()->count();
+        $RtRw = RtRw::find()->count();
+        $dusun = Dusun::find()->count();
+        $pembangunan = Pembangunan::find();
+        $pages = new \yii\data\Pagination([
+            'totalCount' => $pembangunan->count(),
+            'pageSize' => 4
+        ]);
+        $dataPembangunan = $pembangunan->offset($pages->offset)->limit($pages->limit)->orderBy(['id' => SORT_DESC])->all();
+        return $this->render('index', [
+            'user' => $user,
+            'RtRw' => $RtRw,
+            'dusun' => $dusun,
+            'dataPembangunan' => $dataPembangunan,
+        ]);
     }
 
     /**
