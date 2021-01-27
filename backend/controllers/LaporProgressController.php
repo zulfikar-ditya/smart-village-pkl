@@ -8,6 +8,7 @@ use common\models\Query\LaporProgressSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * LaporProgressController implements the CRUD actions for LaporProgress model.
@@ -66,7 +67,20 @@ class LaporProgressController extends Controller
     {
         $model = new LaporProgress();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('LaporProgress');
+            $model->tanggal = $request['tanggal'];
+            $model->capaian_progress = $request['capaian_progress'];
+            $model->uraian_pekerjaan = $request['uraian_pekerjaan'];
+            $model->pembangunan_id = $request['pembangunan_id'];
+            $model->image = UploadedFile::getInstance($model, 'image');
+
+            $imageName = time().'.'.$model->image->getExtension();
+            $ImagePath = 'image/progress/'.$imageName;
+            $model->image->saveAs($ImagePath);
+            $model->image = $ImagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -86,7 +100,20 @@ class LaporProgressController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('LaporProgress');
+            $model->tanggal = $request['tanggal'];
+            $model->capaian_progress = $request['capaian_progress'];
+            $model->uraian_pekerjaan = $request['uraian_pekerjaan'];
+            $model->pembangunan_id = $request['pembangunan_id'];
+            $model->image = UploadedFile::getInstance($model, 'image');
+
+            $imageName = time().'.'.$model->image->getExtension();
+            $ImagePath = 'image/progress/'.$imageName;
+            $model->image->saveAs($ImagePath);
+            $model->image = $ImagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

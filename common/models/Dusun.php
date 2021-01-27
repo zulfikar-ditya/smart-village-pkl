@@ -26,7 +26,7 @@ class Dusun extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nama_dusun'], 'required'],
+            [['nama_dusun'], 'required'],
             [['id'], 'integer'],
             [['nama_dusun'], 'string', 'max' => 45],
         ];

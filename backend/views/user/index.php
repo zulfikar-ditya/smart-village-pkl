@@ -14,10 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create User Admin', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
@@ -30,11 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'roles_id',
             'name',
             'username',
-            'password',
+            // 'password',
             //'auth_key',
             //'password_reset_token',
             //'access_token',
-            //'email:email',
+            'email:email',
             //'photo',
             //'last_login',
             //'penduduk_id',

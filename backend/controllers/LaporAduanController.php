@@ -8,6 +8,7 @@ use common\models\Query\LaporAduanSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * LaporAduanController implements the CRUD actions for LaporAduan model.
@@ -66,7 +67,21 @@ class LaporAduanController extends Controller
     {
         $model = new LaporAduan();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('LaporAduan');
+            $model->deskripsi = $request['deskripsi'];
+            $model->pembangunan_id = $request['pembangunan_id'];
+            $model->status = $request['status'];
+            $model->user_id = Yii::$app->user->identity->id;
+
+            $model->foto = UploadedFile::getInstance($model, 'foto');
+            $imageName = time().'.'.$model->foto->getExtension();
+            $imagePath = 'image/aduan/'.$imageName;
+
+            $model->foto->saveAs($imagePath);
+            $model->foto = $imagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -86,7 +101,20 @@ class LaporAduanController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('LaporAduan');
+            $model->deskripsi = $request['deskripsi'];
+            $model->pembangunan_id = $request['pembangunan_id'];
+            $model->status = $request['status'];
+
+            $model->foto = UploadedFile::getInstance($model, 'foto');
+            $imageName = time().'.'.$model->foto->getExtension();
+            $imagePath = 'image/aduan/'.$imageName;
+
+            $model->foto->saveAs($imagePath);
+            $model->foto = $imagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

@@ -65,13 +65,19 @@ class RtRwController extends Controller
     public function actionCreate()
     {
         $model = new RtRw();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $dusun = \common\models\Dusun::find()->all();
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('RtRw');
+            $model->rw_parent = $request['rw_parent'];
+            $model->rt_child = $request['rt_child'];
+            $model->dusun_id = $request['dusun_id'];
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
+            'dusun' => $dusun
         ]);
     }
 
@@ -85,13 +91,20 @@ class RtRwController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $dusun = \common\models\Dusun::find()->all();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('RtRw');
+            $model->rw_parent = $request['rw_parent'];
+            $model->rt_child = $request['rt_child'];
+            $model->dusun_id = $request['dusun_id'];
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'dusun' => $dusun
         ]);
     }
 

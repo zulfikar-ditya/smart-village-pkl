@@ -30,12 +30,13 @@ class LaporProgress extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'image', 'tanggal', 'capaian_progress', 'uraian_pekerjaan', 'pembangunan_id'], 'required'],
+            [['image', 'tanggal', 'capaian_progress', 'uraian_pekerjaan', 'pembangunan_id'], 'required'],
             [['id', 'pembangunan_id'], 'integer'],
             [['tanggal'], 'safe'],
             [['capaian_progress'], 'number'],
             [['uraian_pekerjaan'], 'string'],
-            [['image'], 'string', 'max' => 255],
+            [['image'], 'image', 'extensions' => 'png, jpg, jpeg'],
+            [['pembangunan_id'], 'exist', 'skipOnError' => true, 'targetClass' => Pembangunan::className(), 'targetAttribute' => ['pembangunan_id' => 'id']],
         ];
     }
 

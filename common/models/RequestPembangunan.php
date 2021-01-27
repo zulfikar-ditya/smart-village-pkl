@@ -32,11 +32,13 @@ class RequestPembangunan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'judul', 'deskripsi', 'user_id', 'kategori_pembangunan_id', 'status'], 'required'],
+            [['judul', 'deskripsi', 'user_id', 'kategori_pembangunan_id', 'status'], 'required'],
             [['id', 'user_id', 'kategori_pembangunan_id'], 'integer'],
             [['deskripsi', 'status'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['judul'], 'string', 'max' => 45],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [['kategori_pembangunan_id'], 'exist', 'skipOnError' => true, 'targetClass' => KategoriPembangunan::className(), 'targetAttribute' => ['kategori_pembangunan_id' => 'id']],
         ];
     }
 

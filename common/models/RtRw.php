@@ -28,9 +28,10 @@ class RtRw extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'rw_parent', 'rt_child', 'dusun_id'], 'required'],
+            [['rw_parent', 'rt_child', 'dusun_id'], 'required'],
             [['id', 'rt_child', 'dusun_id'], 'integer'],
             [['rw_parent'], 'string', 'max' => 5],
+            [['dusun_id'], 'exist', 'skipOnError' => true, 'targetClass' => Dusun::className(), 'targetAttribute' => ['dusun_id' => 'id']],
         ];
     }
 

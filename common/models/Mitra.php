@@ -30,11 +30,13 @@ class Mitra extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nama_mitra', 'alamat', 'no_telp', 'email', 'user_id'], 'required'],
+            [['nama_mitra', 'alamat', 'no_telp', 'email',], 'required'],
             [['id', 'user_id'], 'integer'],
             [['alamat'], 'string'],
             [['nama_mitra', 'email'], 'string', 'max' => 100],
             [['no_telp'], 'string', 'max' => 20],
+            [['email'], 'unique', 'targetAttribute' => 'email'],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
 

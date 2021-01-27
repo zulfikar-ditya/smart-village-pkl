@@ -66,8 +66,19 @@ class MitraController extends Controller
     {
         $model = new Mitra();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('Mitra');
+            $model->nama_mitra = $request['nama_mitra'];
+            $model->alamat = $request['alamat'];
+            $model->no_telp = $request['no_telp'];
+            $model->email = $request['email'];
+            $model->user_id = Yii::$app->user->identity->id;
+            if ($model->validate()) {
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return '<h1>you have some error while saving data</h1>';
+            }
         }
 
         return $this->render('create', [
@@ -86,8 +97,19 @@ class MitraController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('Mitra');
+            $model->nama_mitra = $request['nama_mitra'];
+            $model->alamat = $request['alamat'];
+            $model->no_telp = $request['no_telp'];
+            $model->email = $request['email'];
+            $model->user_id = Yii::$app->user->identity->id;
+            if ($model->validate()) {
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return '<h1>you have some error while saving data</h1>';
+            }
         }
 
         return $this->render('update', [

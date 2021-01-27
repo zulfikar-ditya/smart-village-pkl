@@ -39,7 +39,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
-            'enablePrettyUrl' => true,
+            // 'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],

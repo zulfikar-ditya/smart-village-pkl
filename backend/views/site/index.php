@@ -20,7 +20,7 @@ use yii\helpers\Url;
 <div class="site-index text-capitalize">
     <div class="row justify-content-center">
 
-        <div class="col-md-4 shadow">
+        <div class="col-md-3 mb-3 m-2 shadow">
             <div class="row">
                 
                 <div class="col-md-4 bg-pink align-self-center text-white rounded p-5">
@@ -36,7 +36,7 @@ use yii\helpers\Url;
             </div>
         </div>
         
-        <div class="col-md-4 shadow">
+        <div class="col-md-3 mb-3 m-2 shadow">
             <div class="row">
                 <div class="col-md-4 bg-cyan align-self-center text-white rounded p-5">
                     <i class="fas fa-street-view fa-3x"></i>
@@ -51,7 +51,7 @@ use yii\helpers\Url;
             </div>
         </div>
 
-        <div class="col-md-4 shadow">
+        <div class="col-md-3 mb-3 m-2 shadow">
             <div class="row">
                 <div class="col-md-4 bg-green align-self-center text-white rounded p-5">
                     <i class="fas fa-map-marker-alt fa-3x"></i>
@@ -83,7 +83,7 @@ use yii\helpers\Url;
                         <td><?= $item['nama_pembangunan'] ?></td>
                         <td><?= $item['tgl_mulai'] ?></td>
                         <?php if ($item['status_pembangunan_id']) {?>
-                        <td>Selesai`</td>
+                        <td>Selesai</td>
                         <?php } else {?>
                         <td>Dalam Pengerjaan</td>
                         <?php }?>

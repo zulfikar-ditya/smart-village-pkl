@@ -12,13 +12,18 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id')->textInput() ?>
+    <?= $form->field($model, 'rw_parent')->textInput(['maxlength' => true, 'type' => 'number']) ?>
 
-    <?= $form->field($model, 'rw_parent')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'rt_child')->textInput(['type' => 'number']) ?>
 
-    <?= $form->field($model, 'rt_child')->textInput() ?>
-
-    <?= $form->field($model, 'dusun_id')->textInput() ?>
+    <div class="form-group">
+        <label for="">Dusun Id</label>
+        <select name="RtRw[dusun_id]" id="" class="form-control">
+            <?php foreach ($dusun as $item) { ?>
+                <option value="<?= $item['id'] ?>"><?= $item['nama_dusun'] ?></option>
+            <?php } ?>
+        </select>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -28,7 +28,7 @@ class Pengumuman extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'perihal', 'isi', 'tgl_pengumuman'], 'required'],
+            [['perihal', 'isi', 'tgl_pengumuman'], 'required'],
             [['id'], 'integer'],
             [['isi'], 'string'],
             [['tgl_pengumuman'], 'safe'],

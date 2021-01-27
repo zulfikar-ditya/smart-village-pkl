@@ -30,7 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'image',
+            [
+                'attribute' => 'Image',
+                'value' => $model->image,
+                'format' => ['image', ['width' =>  '150px', 'height'=> '100px']],
+            ],
             'tanggal',
             'capaian_progress',
             'uraian_pekerjaan:ntext',

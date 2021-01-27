@@ -37,13 +37,19 @@ class Penduduk extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nik', 'nama_lengkap', 'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin', 'agama_id', 'status_perkawinan', 'pekerjaan_id', 'pendidikan_id', 'rt_rw_id'], 'required'],
+            [['nik', 'nama_lengkap', 'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin', 'agama_id', 'status_perkawinan', 'pekerjaan_id', 'pendidikan_id', 'rt_rw_id'], 'required'],
             [['id', 'agama_id', 'pekerjaan_id', 'pendidikan_id', 'rt_rw_id'], 'integer'],
             [['tanggal_lahir', 'created_at', 'updated_at'], 'safe'],
             [['jenis_kelamin', 'status_perkawinan'], 'string'],
             [['nik'], 'string', 'max' => 20],
             [['nama_lengkap'], 'string', 'max' => 100],
             [['tempat_lahir'], 'string', 'max' => 50],
+            
+            [['agama_id'], 'exist', 'skipOnError' => true, 'targetClass' => Agama::className(), 'targetAttribute' => ['agama_id' => 'id']],
+            [['pekerjaan_id'], 'exist', 'skipOnError' => true, 'targetClass' => Pekerjaan::className(), 'targetAttribute' => ['pekerjaan_id' => 'id']],
+            [['pendidikan_id'], 'exist', 'skipOnError' => true, 'targetClass' => Pendidikan::className(), 'targetAttribute' => ['pendidikan_id' => 'id']],
+            [['rt_rw_id'], 'exist', 'skipOnError' => true, 'targetClass' => RtRw::className(), 'targetAttribute' => ['rt_rw_id' => 'id']],
+            
         ];
     }
 

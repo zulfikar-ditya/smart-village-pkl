@@ -5,6 +5,10 @@ namespace backend\controllers;
 use Yii;
 use common\models\Penduduk;
 use common\models\Query\PendudukSearch;
+use common\models\Agama;
+use common\models\Pekerjaan;
+use common\models\Pendidikan;
+use common\models\RtRw;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -65,6 +69,10 @@ class PendudukController extends Controller
     public function actionCreate()
     {
         $model = new Penduduk();
+        $agama = Agama::find()->all();
+        $pekerjaan = Pekerjaan::find()->all();
+        $pendidikan = Pendidikan::find()->all();
+        $RtRw = RtRw::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,6 +80,10 @@ class PendudukController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'agama' => $agama,
+            'pekerjaan' => $pekerjaan,
+            'pendidikan' => $pendidikan,
+            'RtRw' => $RtRw,
         ]);
     }
 
@@ -85,13 +97,20 @@ class PendudukController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+        $agama = Agama::find()->all();
+        $pekerjaan = Pekerjaan::find()->all();
+        $pendidikan = Pendidikan::find()->all();
+        $RtRw = RtRw::find()->all();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'agama' => $agama,
+            'pekerjaan' => $pekerjaan,
+            'pendidikan' => $pendidikan,
+            'RtRw' => $RtRw,
         ]);
     }
 

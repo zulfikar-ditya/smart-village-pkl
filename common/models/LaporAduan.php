@@ -32,11 +32,13 @@ class LaporAduan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'foto', 'deskripsi', 'user_id', 'pembangunan_id', 'status'], 'required'],
+            [['deskripsi', 'pembangunan_id', 'status'], 'required'],
             [['id', 'user_id', 'pembangunan_id'], 'integer'],
             [['deskripsi', 'status'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
-            [['foto'], 'string', 'max' => 255],
+            [['foto'], 'image', 'extensions' => 'png, jpg, jpeg'],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [['pembangunan_id'], 'exist', 'skipOnError' => true, 'targetClass' => Pembangunan::className(), 'targetAttribute' => ['pembangunan_id' => 'id']],
         ];
     }
 

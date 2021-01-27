@@ -65,13 +65,22 @@ class RequestPembangunanController extends Controller
     public function actionCreate()
     {
         $model = new RequestPembangunan();
+        $kategoriPembangunan = \common\models\KategoriPembangunan::find()->all();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('RequestPembangunan');
+            $model->judul = $request['judul'];
+            $model->deskripsi = $request['deskripsi'];
+            $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
+            $model->status = $request['status'];
+            $model->user_id = Yii::$app->user->identity->id;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
+            'kategoryPembangunan' => $kategoriPembangunan
         ]);
     }
 
@@ -85,13 +94,22 @@ class RequestPembangunanController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $kategoriPembangunan = \common\models\KategoriPembangunan::find()->all();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('RequestPembangunan');
+            $model->judul = $request['judul'];
+            $model->deskripsi = $request['deskripsi'];
+            $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
+            $model->status = $request['status'];
+            $model->user_id = Yii::$app->user->identity->id;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'kategoryPembangunan' => $kategoriPembangunan
         ]);
     }
 

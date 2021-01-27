@@ -28,7 +28,7 @@ class StatusPembangunan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nama'], 'required'],
+            [['nama'], 'required'],
             [['id'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['nama'], 'string', 'max' => 30],

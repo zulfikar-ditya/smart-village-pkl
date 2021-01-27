@@ -31,7 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'nama_pembangunan',
-            'foto',
+            [
+                'label' => 'Foto',
+                'value' => $model->foto,
+                'format' => ['image', ['width' =>  '150px', 'height'=> '100px']],
+            ],
             'anggaran',
             'tgl_mulai',
             'tgl_selesai',

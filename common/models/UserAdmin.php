@@ -47,10 +47,10 @@ class UserAdmin extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['roles_id', 'name', 'username', 'password', 'auth_key', 'access_token', 'email', 'photo'], 'required'],
+            [['roles_id', 'name', 'username', 'password', 'auth_key', 'email', ], 'required'],
             [['roles_id', 'penduduk_id'], 'integer'],
             [['last_login', 'created_at', 'updated_at'], 'safe'],
-            [['name', 'password', 'password_reset_token', 'access_token', 'email', 'photo'], 'string', 'max' => 255],
+            [['name', 'password', 'password_reset_token', 'access_token', 'email',], 'string', 'max' => 255],
             [['username'], 'string', 'max' => 100],
             [['auth_key'], 'string', 'max' => 32],
             [['password_reset_token'], 'unique'],

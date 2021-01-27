@@ -26,7 +26,7 @@ class Agama extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nama'], 'required'],
+            [['nama'], 'required'],
             [['id'], 'integer'],
             [['nama'], 'string', 'max' => 20],
         ];

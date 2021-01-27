@@ -5,9 +5,14 @@ namespace backend\controllers;
 use Yii;
 use common\models\Pembangunan;
 use common\models\Query\PembangunanSearch;
+use common\models\SumberDanaPembangunan;
+use common\models\KategoriPembangunan;
+use common\models\StatusPembangunan;
+use common\models\Mitra;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * PembangunanController implements the CRUD actions for Pembangunan model.
@@ -65,13 +70,45 @@ class PembangunanController extends Controller
     public function actionCreate()
     {
         $model = new Pembangunan();
+        $sumberDana = SumberDanaPembangunan::find()->all();
+        $statusPembangunan = StatusPembangunan::find()->all();
+        $mitra = Mitra::find()->all();
+        $kategoriPembangunan = KategoriPembangunan::find()->all();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('Pembangunan');
+
+            $model->nama_pembangunan = $request['nama_pembangunan'];
+            $model->anggaran = $request['anggaran'];
+            $model->tgl_mulai = $request['tgl_mulai'];
+            $model->tgl_selesai = $request['tgl_selesai'];
+            $model->longitude = $request['longitude'];
+            $model->latitude = $request['latitude'];
+            $model->keterangan = $request['keterangan'];
+            $model->prosentase = $request['prosentase'];
+            $model->sumber_dana_pembangunan_id = $request['sumber_dana_pembangunan_id'];
+            $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
+            $model->status_pembangunan_id = $request['status_pembangunan_id'];
+            $model->mitra_id = $request['mitra_id'];
+            $model->user_id = Yii::$app->user->identity->id;
+
+            $model->foto = uploadedFile::getInstance($model, 'foto');
+            $model->foto = UploadedFile::getInstance($model, 'foto');
+            $imageName = time().'.'.$model->foto->getExtension();
+            $imagePath = 'image/pembangunan/'.$imageName;
+            $model->foto->saveAs($imagePath);
+            $model->foto = $imagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
+            'sumberDana' => $sumberDana,
+            'statusPembangunan' => $statusPembangunan,
+            'mitra' => $mitra,
+            'kategoriPembangunan' => $kategoriPembangunan
         ]);
     }
 
@@ -85,13 +122,45 @@ class PembangunanController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $sumberDana = SumberDanaPembangunan::find()->all();
+        $statusPembangunan = StatusPembangunan::find()->all();
+        $mitra = Mitra::find()->all();
+        $kategoriPembangunan = KategoriPembangunan::find()->all();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('Pembangunan');
+
+            $model->nama_pembangunan = $request['nama_pembangunan'];
+            $model->anggaran = $request['anggaran'];
+            $model->tgl_mulai = $request['tgl_mulai'];
+            $model->tgl_selesai = $request['tgl_selesai'];
+            $model->longitude = $request['longitude'];
+            $model->latitude = $request['latitude'];
+            $model->keterangan = $request['keterangan'];
+            $model->prosentase = $request['prosentase'];
+            $model->sumber_dana_pembangunan_id = $request['sumber_dana_pembangunan_id'];
+            $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
+            $model->status_pembangunan_id = $request['status_pembangunan_id'];
+            $model->mitra_id = $request['mitra_id'];
+            $model->user_id = Yii::$app->user->identity->id;
+
+            $model->foto = uploadedFile::getInstance($model, 'foto');
+            $model->foto = UploadedFile::getInstance($model, 'foto');
+            $imageName = time().'.'.$model->foto->getExtension();
+            $imagePath = 'image/pembangunan/'.$imageName;
+            $model->foto->saveAs($imagePath);
+            $model->foto = $imagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'sumberDana' => $sumberDana,
+            'statusPembangunan' => $statusPembangunan,
+            'mitra' => $mitra,
+            'kategoriPembangunan' => $kategoriPembangunan
         ]);
     }
 
