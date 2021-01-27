@@ -47,7 +47,7 @@ if (Yii::$app->controller->action->id === 'login') {
     
     <body class="hold-transition skin-purple sidebar-mini">
     <?php $this->beginBody() ?>
-    <div class="wrapper">
+    <div class="wrapper" style="background: white;">
 
         <?= $this->render(
             'header.php',
@@ -59,11 +59,12 @@ if (Yii::$app->controller->action->id === 'login') {
             ['directoryAsset' => $directoryAsset]
         )
         ?>
-        
-        <?= $this->render(
-            'content.php',
-            ['content' => $content, 'directoryAsset' => $directoryAsset]
-        ) ?>
+        <div class="">
+            <?= $this->render(
+                'content.php',
+                ['content' => $content, 'directoryAsset' => $directoryAsset]
+            ) ?>
+        </div>
 
     </div>
 

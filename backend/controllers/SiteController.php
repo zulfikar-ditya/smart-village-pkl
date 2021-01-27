@@ -10,6 +10,9 @@ use common\models\Pembangunan;
 use common\models\user;
 use common\models\RtRw;
 use common\models\dusun;
+use common\models\Penduduk;
+use common\models\LaporAduan;
+use common\models\RequestPembangunan;
 
 /**
  * Site controller
@@ -78,6 +81,10 @@ class SiteController extends Controller
             'RtRw' => $RtRw,
             'dusun' => $dusun,
             'dataPembangunan' => $dataPembangunan,
+            'penduduk' => Penduduk::find()->count(),
+            'laporAduan' => LaporAduan::find()->where(['status' => 'laporanbaru'])->count(),
+            'requestPembangunan' => RequestPembangunan::find()->where(['status' => 'requestbaru'])->count(),
+            'countPembangunan' => Pembangunan::find()->where(['status_pembangunan_id' => '1'])->count(),
         ]);
     }
 

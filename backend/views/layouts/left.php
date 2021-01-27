@@ -1,7 +1,7 @@
 <aside class="main-sidebar">
 
     <section class="sidebar">
-
+        <?php if(Yii::$app->user->identity->roles_id == 1) {?>
         <?= dmstr\widgets\Menu::widget(
             [
                 'options' => [
@@ -62,6 +62,37 @@
                 ],
             ]
         ) ?>
+        <?php } else { ?>
+            <?= dmstr\widgets\Menu::widget(
+            [
+                'options' => [
+                            'class' => 'sidebar-menu tree text-capitalize', 
+                            'data-widget'=> 'tree',
+                            ],
+                'items' => [
+                    ['label' => 'Dashboard', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/']],
+                    [
+                        'label' => 'Master pembangunan',
+                        'icon' => 'fas fa-tools',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => 'Pembangunan', 'icon' => 'far fa-list-alt', 'url' => ['/pembangunan']],
+                            ['label' => 'Kategori Pembangunan', 'icon' => 'far fa-list-alt', 'url' => ['/kategori-pembangunan']],
+                            ['label' => 'Sumber Dana', 'icon' => 'fas fa-money-check-alt', 'url' => ['/sumber-dana-pembangunan',]],
+                            ['label' => 'mitra', 'icon' => 'fas fa-praying-hands', 'url' => ['/mitra']],
+                        ]
+                    ],
+                    ['label' => 'request pembangunan', 'icon' => 'fas fa-search-plus', 'url' => ['/request-pembangunan']],
+                    ['label' => 'penduduk', 'icon' => 'fas fa-user', 'url' => ['/penduduk']],
+                    ['label' => 'Lapor Aduan', 'icon' => 'far fa-flag', 'url' => ['/lapor-aduan']],
+                    ['label' => 'pengumuman', 'icon' => 'far fa-envelope', 'url' => ['/pengumuman']],
+                    
+                ],
+            ]
+        ) ?>
+        <?php } ?>
+
+        
 
     </section>
 
