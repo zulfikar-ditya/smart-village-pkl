@@ -14,6 +14,11 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+        'CheckRole' => [
+            'class' => 'common\components\BackendMiddleware',
+            'on checkAdmin' => ['common\components\BackendMiddleware', 'AutoCheckAdmin'],
+            'on checkOperator' => ['common\components\BackendMiddleware', 'AutoCheckOperator'],
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],

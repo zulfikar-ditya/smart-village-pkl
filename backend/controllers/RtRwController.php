@@ -20,6 +20,16 @@ class RtRwController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['logout', 'index', 'create', 'view', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -35,6 +45,9 @@ class RtRwController extends Controller
      */
     public function actionIndex()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $searchModel = new RtRwSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -52,6 +65,9 @@ class RtRwController extends Controller
      */
     public function actionView($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -64,6 +80,9 @@ class RtRwController extends Controller
      */
     public function actionCreate()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $model = new RtRw();
         $dusun = \common\models\Dusun::find()->all();
         if (Yii::$app->request->isPost) {
@@ -90,6 +109,9 @@ class RtRwController extends Controller
      */
     public function actionUpdate($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $model = $this->findModel($id);
         $dusun = \common\models\Dusun::find()->all();
 
@@ -117,6 +139,9 @@ class RtRwController extends Controller
      */
     public function actionDelete($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

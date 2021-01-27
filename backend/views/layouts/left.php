@@ -62,7 +62,7 @@
                 ],
             ]
         ) ?>
-        <?php } else { ?>
+        <?php } else if (Yii::$app->user->identity->roles_id == 7){ ?>
             <?= dmstr\widgets\Menu::widget(
             [
                 'options' => [
@@ -85,11 +85,24 @@
                     ['label' => 'request pembangunan', 'icon' => 'fas fa-search-plus', 'url' => ['/request-pembangunan']],
                     ['label' => 'penduduk', 'icon' => 'fas fa-user', 'url' => ['/penduduk']],
                     ['label' => 'Lapor Aduan', 'icon' => 'far fa-flag', 'url' => ['/lapor-aduan']],
-                    ['label' => 'pengumuman', 'icon' => 'far fa-envelope', 'url' => ['/pengumuman']],
+                    ['label' => 'report', 'icon' => 'fas fa-tasks', 'url' => ['/lapor-progress']],
                     
                 ],
             ]
         ) ?>
+        <?php } else {?>
+            <?= dmstr\widgets\Menu::widget(
+            [
+                'options' => [
+                            'class' => 'sidebar-menu tree text-capitalize', 
+                            'data-widget'=> 'tree',
+                            ],
+                'items' => [
+                    ['label' => 'Access Denied', 'icon' => 'fas fa-user-times', 'url' => ['/']],
+                ]
+            ]
+            ) ?>
+
         <?php } ?>
 
         

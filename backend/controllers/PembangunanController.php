@@ -25,6 +25,16 @@ class PembangunanController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['logout', 'index', 'create', 'view', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -40,6 +50,9 @@ class PembangunanController extends Controller
      */
     public function actionIndex()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $searchModel = new PembangunanSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -57,6 +70,9 @@ class PembangunanController extends Controller
      */
     public function actionView($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -69,6 +85,9 @@ class PembangunanController extends Controller
      */
     public function actionCreate()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $model = new Pembangunan();
         $sumberDana = SumberDanaPembangunan::find()->all();
         $statusPembangunan = StatusPembangunan::find()->all();
@@ -121,6 +140,9 @@ class PembangunanController extends Controller
      */
     public function actionUpdate($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $model = $this->findModel($id);
         $sumberDana = SumberDanaPembangunan::find()->all();
         $statusPembangunan = StatusPembangunan::find()->all();
@@ -173,6 +195,9 @@ class PembangunanController extends Controller
      */
     public function actionDelete($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

@@ -67,6 +67,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $user = User::find()->count();
         $RtRw = RtRw::find()->count();
         $dusun = Dusun::find()->count();
