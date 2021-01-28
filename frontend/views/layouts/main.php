@@ -20,7 +20,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title>Smart VIllage <?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
@@ -32,29 +32,42 @@ AppAsset::register($this);
             font-family: 'Oxygen', sans-serif;
         }
     </style>
-
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap" style="padding: 0;">
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top text-white shadow',
+            'style' => 'background: #3B82F6;',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
+    if (\yii\helpers\Url::current() == '/yii/smart_village/frontend/web/index.php?r=site%2Findex') {
+        $menuItems = [
+            ['label' => 'Tentang', 'url' => '#about'],
+            ['label' => 'Pembangunan', 'url' => '#pembangunan'],
+            ['label' => 'Layanan', 'url' => '#layanan'],
+            ['label' => 'Testimoni', 'url' => '#testimoni'],
+            ['label' => 'Contact', 'url' => '#contact'],
+        ];
+    }
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = [
+            'label' => 'SignUp', 'url' => ['/site/signup'],
+            'options' => [
+                'class' => 'bg-green'
+            ]
+        ];
+        $menuItems[] = [
+            'label' => 'SignIn', 'url' => ['/site/login'],
+            'options' => [
+                'class' => 'bg-cyan'
+            ]
+        ];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
@@ -71,23 +84,9 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
+    <?= Alert::widget() ?>
+    <?= $content ?>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>

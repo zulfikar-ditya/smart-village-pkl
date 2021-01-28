@@ -11,25 +11,31 @@ $this->title = 'Signup';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-signup">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please fill out the following fields to signup:</p>
-
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
-
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-
-                <?= $form->field($model, 'email') ?>
-
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
-                </div>
-
-            <?php ActiveForm::end(); ?>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-md-4 align-self-center shadow" style="padding: 1.5rem;">
+                <h1 class="text-center" style="letter-spacing: 10px;"><?= Html::encode($this->title) ?></h1>
+                <?php $form = ActiveForm::begin(
+                    [
+                        'id' => 'form-signup',
+                        'options' => [
+                            'style' => 'margin-top: 3rem'
+                        ]
+                    ]
+                ); ?>
+    
+                    <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+    
+                    <?= $form->field($model, 'email') ?>
+    
+                    <?= $form->field($model, 'password')->passwordInput() ?>
+    
+                    <div class="row justify-content-center">
+                        <?= Html::submitButton('Signup', ['class' => 'btn btn-success', 'name' => 'signup-button']) ?>
+                    </div>
+    
+                <?php ActiveForm::end(); ?>
+            </div>
         </div>
     </div>
 </div>

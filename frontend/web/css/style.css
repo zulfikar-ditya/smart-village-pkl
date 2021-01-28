@@ -1,0 +1,304 @@
+:root {
+    --blue-gray	:	#64748B;
+    --cool-gray	:	#6B7180;
+    --gray		:	#71717A;
+    --true-gray	: 	#737373;
+    --warm-gray	:	#78716C;
+    --red		: 	#EF4444;
+    --orange	:	#F97316;
+    --amber		:	#F59E0B;
+    --yellow	:	#EAB308;
+    --lime		: 	#84CC16;
+    --green		: 	#22C55E;
+    --emarald	: 	#10B981;
+    --teal		: 	#14B8A6;
+    --cyan		: 	#06B6D4;
+    --light-blue: 	#0EA5E9;
+    --blue		: 	#3B82F6;
+    --indigo	: 	#6366F1;
+    --violet	: 	#8B5CF6;
+    --fuchsia	:	#D946EF;
+    --pink		:	#EC4899;
+    --rose		:	#F43F5E;
+}
+
+.bg-cool-gray {
+    background: var(--cool-gray);
+}
+
+.bg-gray {
+    background: var(--gray);
+}
+
+.bg-tru--true-gray {
+    background: var(--true-gray);
+}
+
+.bg-warm--warm-gray {
+    background: var(--warm-gray);
+}
+
+.bg-red {
+    background: var(--red);
+}
+
+.bg-orange {
+    background: var(--orange);
+}
+
+.bg-amber {
+    background: var(--amber);
+}
+
+.bg-yellow {
+    background: var(--yellow);
+}
+
+.bg-lime {
+    background: var(--lime);
+}
+
+.bg-green {
+    background: var(--green);
+}
+
+.bg-green {
+    background: var(--green);
+}
+
+.bg-emarald {
+    background: var(--emarald);
+}
+
+.bg-teal {
+    background: var(--teal);
+}
+
+.bg-cyan {
+    background: var(--cyan);
+}
+
+.bg-light-blue {
+    background: var(--light-blue);
+}
+
+.bg-blue {
+    background: var(--blue);
+}
+
+.bg-indigo {
+    background: var(--indigo);
+}
+
+.bg-violet {
+    background: var(--violet);
+}
+
+.bg-fuchsia {
+    background: var(--fuchsia);
+}
+
+.bg-pink {
+    background: var(--pink);
+}
+
+.bg-rose {
+    background: var(--rose);
+}
+
+.bg-white {
+    background: white;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.shadow {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, .1);
+}
+
+.navbar-inverse {
+    border: none;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.navbar-inverse .navbar-brand, 
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: white;
+    background: none;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border: none;
+}
+
+.navbar-nav {
+    padding: 5px;
+}
+
+.navbar-nav > li.bg-green {
+    margin-right: 10px;
+}
+
+.navbar-nav > li.bg-green,
+.navbar-nav > li.bg-cyan {
+    border-radius: 10px;
+}
+
+.navbar-nav > li > a {
+    padding: 10px;
+    align-self: center;
+}
+
+.about {
+    background: linear-gradient(180deg, var(--blue), var(--cyan) );
+    color: white;
+}
+
+.about .container .row {
+    height: 100vh;
+}
+
+.about .container .row .col-md-12 .text-jumbotron {
+    font-size: 5rem;
+    letter-spacing: 10px;
+}
+
+.pembangunan .container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.pembangunan .container .row .col-md-4 {
+    border-radius: 20px;
+    padding: 50px;
+    color: white;
+    margin: 10px;
+    height: 300px;
+}
+
+.pembangunan .container .row .col-md-4:nth-child(1) {
+    background: var(--amber);
+}
+
+.pembangunan .container .row .col-md-4:nth-child(2) {
+    background: var(--red);
+}
+
+.pembangunan .container .row .col-md-4:nth-child(3) {
+    background: var(--fuchsia);
+}
+
+.pembangunan .container .row .col-md-4 .card .card-header img {
+    height: 150px;
+    width: 150px;
+}
+
+.pelayanan {
+    background-image: url(../images/bg/bg-1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.pelayanan .container .text-center{
+    color: white;
+}
+
+.pelayanan .container .row .col-md-3 {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    /* height: 100px; */
+}
+
+.pelayanan .container .row .col-md-3 .row .col-md-4 img {
+    height: 40px;
+    width: 40px;
+}
+
+.testimoni .container .row {
+    height: 70vh;
+}
+
+.testimoni .container .row .col-md-7 .text-center div img {
+    width: 150px;
+    height: 150px;
+}
+
+.m-2 {
+    margin: 10px;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.pt-5 {
+    padding-top: 3rem;
+}
+
+.contact {
+    background-image: url('../images/bg/bg-2.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.contact .container .row#row {
+    height: 70vh;
+    color: white;
+    flex-direction: column;
+}
+
+.contact .container .row .col-md-6 hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
