@@ -22,6 +22,10 @@
     --rose		:	#F43F5E;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .bg-cool-gray {
     background: var(--cool-gray);
 }
@@ -208,29 +212,30 @@
     margin-bottom: 100px;
 }
 
-.pembangunan .container .row .col-md-4 {
+.pembangunan .container .row .col-md-3 {
     border-radius: 20px;
     padding: 50px;
     color: white;
-    margin: 10px;
-    height: 300px;
+    margin: 30px;
+    height: 250px;
+    text-align: center;
 }
 
-.pembangunan .container .row .col-md-4:nth-child(1) {
+.pembangunan .container .row .col-md-3:nth-child(1) {
     background: var(--amber);
 }
 
-.pembangunan .container .row .col-md-4:nth-child(2) {
+.pembangunan .container .row .col-md-3:nth-child(2) {
     background: var(--red);
 }
 
-.pembangunan .container .row .col-md-4:nth-child(3) {
+.pembangunan .container .row .col-md-3:nth-child(3) {
     background: var(--fuchsia);
 }
 
-.pembangunan .container .row .col-md-4 .card .card-header img {
-    height: 150px;
-    width: 150px;
+.pembangunan .container .row .col-md-3 .card .card-header img {
+    height: 100px;
+    width: 100px;
 }
 
 .pelayanan {
@@ -256,7 +261,7 @@
 }
 
 .testimoni .container .row {
-    height: 70vh;
+    height: 100vh;
 }
 
 .testimoni .container .row .col-md-7 .text-center div img {
@@ -289,11 +294,11 @@
     background-image: url('../images/bg/bg-2.png');
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 100vh;
 }
 
 .contact .container .row#row {
-    height: 70vh;
+    height: 100vh;
     color: white;
     flex-direction: column;
 }
@@ -301,4 +306,25 @@
 .contact .container .row .col-md-6 hr{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+    .pembangunan .container .row .col-md-3 {
+        width: 50%;
+    }
+
+    .pelayanan .container .row .col-md-3 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pembangunan .container .row .col-md-3 {
+        width: 90%;
+    }
+
+    .pelayanan .container .row .col-md-3 {
+        width: 90%;
+        justify-content: center;
+    }
 }

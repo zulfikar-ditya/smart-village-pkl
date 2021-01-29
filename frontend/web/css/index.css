@@ -1,0 +1,51 @@
+.text-delay {
+    animation: text-delay 3s normal;
+}
+
+.animate-text {
+    animation: text 3s;
+}
+
+@keyframes text-delay {
+    0% {
+        margin-bottom: -80px;
+    }
+
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -80px;
+    }
+}
+
+@keyframes text {
+    0% {
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    50% {
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    75% {
+        opacity: 0;
+        overflow: hidden;
+        animation-delay: 3s;
+    }
+
+    100% {
+        overflow: visible;
+        opacity: 1;
+    }
+}

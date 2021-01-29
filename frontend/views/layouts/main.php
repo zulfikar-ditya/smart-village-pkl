@@ -32,6 +32,7 @@ AppAsset::register($this);
             font-family: 'Oxygen', sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -87,7 +88,10 @@ AppAsset::register($this);
     <?= Alert::widget() ?>
     <?= $content ?>
 </div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <?php $this->endBody() ?>
 </body>
 </html>
