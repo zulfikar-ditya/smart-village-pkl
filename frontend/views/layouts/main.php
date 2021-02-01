@@ -33,6 +33,7 @@ AppAsset::register($this);
         }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -53,6 +54,7 @@ AppAsset::register($this);
             ['label' => 'Pembangunan', 'url' => '#pembangunan'],
             ['label' => 'Layanan', 'url' => '#layanan'],
             ['label' => 'Testimoni', 'url' => '#testimoni'],
+            ['label' => 'Products', 'url' => '#product'],
             ['label' => 'Contact', 'url' => '#contact'],
         ];
     }
@@ -74,7 +76,7 @@ AppAsset::register($this);
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
                 'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
+                // ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
             . '</li>';

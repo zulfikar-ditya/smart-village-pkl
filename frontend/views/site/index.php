@@ -29,10 +29,11 @@
                 <div class="col-md-3 align-self-center shadow" data-aos="fade-up">
                     <div class="card">
                         <div class="card-header">
-                            <img class="card-img-icon" src="../web/images/icon/iconmonstr-map-8-240 (1).png">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-3.148 0-6 2.553-6 5.702 0 4.682 4.783 5.177 6 12.298 1.217-7.121 6-7.616 6-12.298 0-3.149-2.851-5.702-6-5.702zm0 8c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2zm12 16l-6.707-2.427-5.293 2.427-5.581-2.427-6.419 2.427 4-9 3.96-1.584c.38.516.741 1.08 1.061 1.729l-3.523 1.41-1.725 3.88 2.672-1.01 1.506-2.687-.635 3.044 4.189 1.789.495-2.021.465 2.024 4.15-1.89-.618-3.033 1.572 2.896 2.732.989-1.739-3.978-3.581-1.415c.319-.65.681-1.215 1.062-1.731l4.021 1.588 3.936 9z"/></svg>
                         </div>
                         <div class="card-body">
                             <h4>Pemetaan Pembangunan</h4>
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -40,10 +41,11 @@
                 <div class="col-md-3 align-self-center shadow" data-aos="fade-up">
                     <div class="card">
                         <div class="card-header">
-                            <img class="card-img-icon" src="../web/images/icon/iconmonstr-banknote-11-240.png">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.164 7.165c-1.15.191-1.702 1.233-1.231 2.328.498 1.155 1.921 1.895 3.094 1.603 1.039-.257 1.519-1.252 1.069-2.295-.471-1.095-1.784-1.827-2.932-1.636zm1.484 2.998l.104.229-.219.045-.097-.219c-.226.041-.482.035-.719-.027l-.065-.387c.195.03.438.058.623.02l.125-.041c.221-.109.152-.387-.176-.453-.245-.054-.893-.014-1.135-.552-.136-.304-.035-.621.356-.766l-.108-.239.217-.045.104.229c.159-.026.345-.036.563-.017l.087.383c-.17-.021-.353-.041-.512-.008l-.06.016c-.309.082-.21.375.064.446.453.105.994.139 1.208.612.173.385-.028.648-.36.774zm10.312 1.057l-3.766-8.22c-6.178 4.004-13.007-.318-17.951 4.454l3.765 8.22c5.298-4.492 12.519-.238 17.952-4.454zm-2.803-1.852c-.375.521-.653 1.117-.819 1.741-3.593 1.094-7.891-.201-12.018 1.241-.667-.354-1.503-.576-2.189-.556l-1.135-2.487c.432-.525.772-1.325.918-2.094 3.399-1.226 7.652.155 12.198-1.401.521.346 1.13.597 1.73.721l1.315 2.835zm2.843 5.642c-6.857 3.941-12.399-1.424-19.5 5.99l-4.5-9.97 1.402-1.463 3.807 8.406-.002.007c7.445-5.595 11.195-1.176 18.109-4.563.294.648.565 1.332.684 1.593z"/></svg>
                         </div>
                         <div class="card-body">
                             <h4>Tranparansi Dana</h4>
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -51,10 +53,11 @@
                 <div class="col-md-3 align-self-center shadow" data-aos="fade-up">
                     <div class="card">
                         <div class="card-header">
-                            <img class="card-img-icon" src="../web/images/icon/iconmonstr-construction-29-240.png">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24"><path d="M16.063 19.528l-6.416-5.37 1.08 1.961c.134.241.214.515.232.791l.38 5.793c.041.674-.466 1.297-1.253 1.297-.59 0-1.093-.4-1.225-.974l-1.157-4.961c-.385-.437-1.475-1.593-2.135-2.291-.719 1.711-2.536 6.043-3.114 7.459-.192.473-.645.767-1.179.767-.703 0-1.276-.569-1.276-1.27 0-.092 0-.112.761-3.863.518-2.555 1.167-5.755 1.473-7.382.084-.445.287-.86.587-1.198l.938-1.057-3.37-2.82c-.507-.425.137-1.192.642-.767l.949.795c.325-.626.855-1.651 1.165-2.278.199-.397.589-.658 1.045-.699 1.178.012 2.314.018 5.252.039.57.005 1.121.049 1.596.528.294.294 2.051 2.176 2.416 2.542.333.334.522.794.521 1.263l-.005 8.639 2.766 2.316 2.72-2.996c.235-.259.546-.381.854-.381.465 0 .919.277 1.088.779.937 2.817 2.602 7.81 2.602 7.81h-12l4.063-4.472zm-11.537-9.656l-.957 1.079c-.179.202-.302.451-.352.72-.306 1.63-.956 4.835-1.476 7.394-.371 1.829-.721 3.556-.744 3.72.01.211.431.32.533.071.726-1.782 3.414-8.175 3.414-8.175.186-.439.621-.362.823-.151 0 0 2.101 2.208 2.629 2.776.139.15.235.334.282.531l1.157 4.963c.064.287.524.261.506-.033l-.38-5.79c-.008-.131-.047-.261-.109-.375l-1.943-3.527c-.07-.125-.081-.271-.037-.402l-3.346-2.801zm18.087 13.128c-.559-1.676-1.793-5.397-2.164-6.494-.036-.106-.171-.129-.253-.042-1.031 1.082-4.259 4.691-5.936 6.536h8.353zm-9.642-7.364l.004-7.805c.001-.206-.083-.408-.229-.555-.709-.711-1.804-1.928-2.417-2.543-.177-.179-.37-.229-.895-.233-2.865-.021-4.154-.027-5.206-.041-.063.008-.143.058-.187.146-.338.684-.938 1.842-1.252 2.444l.07.049 1.694-1.887c.103-.114.259-.169.405-.165l2.617.175c.414.028.616.521.34.831l-2.725 3.072 3.308 2.768 2.434-2.826c.273-.316.796-.177.871.239l1.165 6.329.003.002zm-3.706-3.102l.94.787 1.527 1.278-.729-4.083-1.738 2.018zm-5.677-4.751l.835.699 2.068-2.331-1.356-.091-1.547 1.723zm10.845-2.096c-1.568 0-2.845-1.275-2.845-2.843s1.277-2.844 2.845-2.844c1.568 0 2.844 1.276 2.844 2.844 0 1.568-1.276 2.843-2.844 2.843zm0-4.687c-1.018 0-1.845.827-1.845 1.844 0 1.016.827 1.843 1.845 1.843 1.017 0 1.844-.827 1.844-1.843 0-1.017-.827-1.844-1.844-1.844z"/></svg>
                         </div>
                         <div class="card-body">
                             <h4>Pemerataan Pembangunan</h4>
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -63,11 +66,11 @@
         </div>
     </section>
     
-    <section class="pelayanan" id="layanan" data-aos="zoom-in">
+    <section class="pelayanan" data-aos="zoom-in">
 
         <div class="container">
             <div class="text-center mb-5 pt-5">
-                <h2>Layanan</h2>
+                <h2 id="layanan">Layanan</h2>
                 <hr>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
             </div>
@@ -75,8 +78,8 @@
     
                 <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yNCAyM2gtMjBjLTIuMjA4IDAtNC0xLjc5Mi00LTR2LTE1LjY5NGMuMzEzLTEuMDcxIDEuMjg1LTIuMzA2IDMtMi4zMDYgMS44NTUgMCAyLjc2OSAxLjM0MiAyLjk5NSAyLjMxMmwuMDA1IDEuNjg4aDE4djE4em0tMi0xNmgtMTZ2MTFzLS41ODctMS0xLjkyMi0xYy0xLjEwNCAwLTIuMDc4Ljg5Ni0yLjA3OCAycy44OTYgMiAyIDJoMTh2LTE0em0tMiAxMmgtMTJ2LTEwaDEydjEwem0tOC05aC0zdjhoMTB2LThoLTZ2M2g2djFoLTJ2M2gtMXYtM2gtM3YzaC0xdi03eiIvPjwvc3ZnPg==">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.362 2c4.156 0 2.638 6 2.638 6s6-1.65 6 2.457v11.543h-16v-20h7.362zm.827-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm-5.189 12.5c0-.828.672-1.5 1.501-1.5.827 0 1.499.672 1.499 1.5s-.672 1.5-1.499 1.5c-.829 0-1.501-.672-1.501-1.5zm6.5.5l-2.093 2.968-1.31-.968-3.097 4h10l-3.5-6z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Data Pembangunan</h5>
@@ -86,8 +89,8 @@
     
                 <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMCAxNS41NjJsMS45MzItNy41NjIgMy41MjYuODkxLTEuOTc0IDcuNTYyLTMuNDg0LS44OTF6bTE4LjQxNS45MDJjLjEyNS4yODcuMTg3LjU5OC4xNTUuOTEtLjA3OS44MjktLjY5OCAxLjQ0OC0xLjQ1NyAxLjYwMi0uMjU0LjUzMy0uNzMzLjg4Ny0xLjI4NSAxLjAwMi0uMjQ0LjUxMi0uNzIyLjg5LTEuMjk2IDEuMDEtLjMyNS42NjgtLjk3IDEuMDEyLTEuNjc0IDEuMDEyLS41MTYgMC0xLjAwNC0uMTgzLTEuMzU2LS41MzgtLjkyOC40MDQtMS45MDItLjA0OC0yLjIzMi0uODYzLS41OTYtLjA2OC0xLjEwNy0uNDUyLTEuMzMyLS45OTctLjU5OS0uMDcxLTEuMTE0LS40NTgtMS4zNC0xLjAwMy0xLjE4OC0uMTM4LTEuODQ4LTEuNDQtMS4xOTgtMi40OTUtLjIzMy0uMDU4LS40OTQtLjEwNC0uNzUxLS4xNTJsLjM4My0xLjQ2NGMuNTI0LjEgMS4wMS4yMTkgMS40NTMuMzU4LjkxMy0uNjU1IDIuMTUxLS4yOTUgMi41NDkuNjc5LjYwOC4wNjkgMS4xMTYuNDY0IDEuMzM0IDEgLjU5OC4wNjggMS4xMTEuNDUxIDEuMzM1Ljk5OC43MzguMDgyIDEuMzYuNjUzIDEuNDQ5IDEuNDM0bC4wMDIuMjI1LjQ1LjQwMmMuMjUyLjI5MS42OC4zMjQuOTYuMTA2LjI4Ni0uMjIzLjMyNC0uNjI0LjA3NS0uOTA5bC0xLjQ1Ny0xLjI3OWMtLjE1Ny0uMTM5LjA1Mi0uMzguMjEzLS4yNDFsMS40OTEgMS4zMDhjLjI1Ny4yOTQuNjkyLjMzMi45NjkuMTE0LjI4NS0uMjIuMzE2LS42MzEuMDY4LS45MTZsLTEuODk2LTEuNjI4Yy0uMTYyLS4xMzUuMDQ4LS4zOC4yMDgtLjI0MmwxLjk0NCAxLjY2OWMuMjQ4LjI4Mi42NzguMzM1Ljk2Ny4xMTQuMjgzLS4yMi4zNDktLjYwNi0uMDAyLS45OTUtMS4yNC0xLjExMi0yLjY3MS0yLjQwNS00LjE0My0zLjc5Ni0uMzU1LjQ4OC0yLjE3NiAxLjUwMi0zLjI3OSAxLjUwMnMtMS43NzktLjY3NS0xLjk2LTEuMzQzYy0uMTU3LS41ODIuMDUxLTEuMTM5LjUzMS0xLjQxOS41MzUtLjMxMyAxLjA1NS0uNzYyIDEuNTYyLTEuMjY5LS43ODktLjU4Ni0xLjIwMy0uMzk4LTIuMDY3LjAxMy0uNTAzLjIzOC0xLjEuNTIxLTEuODU0LjY0N2wuNDM4LTEuNjdjMS4zMjctLjQ4OCAyLjU0OS0xLjYwOCA0LjUwNS0uMDgzbC40OTEtLjU1MmMuMzk1LS40NDcuOTExLS43MTUgMS41MDMtLjcxNS40MzYgMCAuOTEuMTYxIDEuNDA4LjQxNyAxLjUxOC43OTMgMi4yOTMgMS4yNTYgMy40NDMgMS4yOTRsLjM5NCAxLjUwOGgtLjAwOGMtMS43OTcuMDMzLTIuNjc2LS41MDgtNC41MTYtMS40Ny0uNTEzLS4yNjMtLjg1OS0uMzE4LTEuMS0uMDQ0LS45ODQgMS4xMi0yLjAzMSAyLjMwOS0zLjE5MiAzLjA2My41NzMuNDU4IDIuMDE5LS40NTggMi41OTItLjkyLjI1LS4yMDEuNjM4LS40NjggMS4xMjgtLjQ2OC41NTMgMCAuOTU1LjMzMSAxLjI0NC42MTkuNjguNjggMi41NyAyLjM4OSAzLjQwNyAzLjE0Mi40MzQtLjI0Mi44NjgtLjQzNSAxLjMxMS0uNjA1bC4zODMgMS40NjdjLS4zMTkuMTM0LS42MzMuMjg2LS45NS40NjF6bS0xMS4wMzcuODc1bC42MDktLjc0N2MuMjUtLjMuMjE1LS43MjItLjA4LS45NDQtLjI5Ni0uMjIzLS43MzctLjE1OC0uOTg2LjE0bC0uNjEuNzQ5Yy0uMjUxLjI5OC0uMjE0LjcyMS4wOC45NDJzLjczNy4xNTkuOTg3LS4xNHptMS4zMjggMS4wMDZsLjYxNy0uNzU1Yy4yNDgtLjI5Ny4yMTMtLjcyMi0uMDgyLS45NDMtLjI5NC0uMjIxLS43MzQtLjE1OS0uOTg0LjE0MmwtLjYxNi43NTRjLS4yNTEuMy0uMjEuNzEyLjA4Ni45MzYuMjk3LjIyMi43MjkuMTY3Ljk3OS0uMTM0em0xLjM0My45OTJsLjYwOC0uNzQ3Yy4yNTEtLjI5OS4yMTUtLjcyMS0uMDgtLjk0NC0uMjk2LS4yMjItLjczNS0uMTU3LS45ODYuMTQybC0uNjA5Ljc0NWMtLjI1MS4zLS4yMTMuNzI0LjA4Mi45NDUuMjkzLjIyMS43MzQuMTYuOTg1LS4xNDF6bTEuODY1LS42OTFjLS4yOTQtLjIyNC0uNzM1LS4xNTktLjk4Ny4xMzlsLS42MTIuNzUxYy0uMjQ5LjI5OS0uMjEzLjcyMi4wODIuOTQzLjI5NS4yMjEuNzM1LjE2Ljk4Ni0uMTQybC42MS0uNzVjLjI1My0uMjk3LjIxNy0uNzItLjA3OS0uOTQxem0xLjQyNyAxLjEzNGwtLjI0LS4yMTJjLS4wNjMuMjM5LS4xNzMuNDY0LS4zMzIuNjVsLS4zNTguNDQxYy4xMzMuMTA2LjI4OC4xNzYuNDQ4LjE3Ni4xNDkgMCAuMjk1LS4wNDYuNDE1LS4xMzguMjg0LS4yMjMuMzE3LS42MzIuMDY3LS45MTd6bTUuMjAxLTEwLjg4OWwxLjk3NCA3LjU2MiAzLjQ4NC0uODkxLTEuOTMyLTcuNTYyLTMuNTI2Ljg5MXptLTcuOTU5LTYuODkxbC0uOTg2LjE3NC41MjEgMi45NTQuOTg0LS4xNzQtLjUxOS0yLjk1NHptMy44Mi4xNzRsLS45ODUtLjE3NC0uNTIxIDIuOTU0Ljk4NS4xNzQuNTIxLTIuOTU0em0zLjU5NyAxLjIyOGwtLjg2Ny0uNS0xLjUgMi41OTguODY3LjUgMS41LTIuNTk4em0tMTEuMTMzLS41bC0uODY3LjUgMS41IDIuNTk4Ljg2Ny0uNS0xLjUtMi41OTh6Ii8+PC9zdmc+">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 15.562l1.932-7.562 3.526.891-1.974 7.562-3.484-.891zm18.415.902c.125.287.187.598.155.91-.079.829-.698 1.448-1.457 1.602-.254.533-.733.887-1.285 1.002-.244.512-.722.89-1.296 1.01-.325.668-.97 1.012-1.674 1.012-.516 0-1.004-.183-1.356-.538-.928.404-1.902-.048-2.232-.863-.596-.068-1.107-.452-1.332-.997-.599-.071-1.114-.458-1.34-1.003-1.188-.138-1.848-1.44-1.198-2.495-.233-.058-.494-.104-.751-.152l.383-1.464c.524.1 1.01.219 1.453.358.913-.655 2.151-.295 2.549.679.608.069 1.116.464 1.334 1 .598.068 1.111.451 1.335.998.738.082 1.36.653 1.449 1.434l.002.225.45.402c.252.291.68.324.96.106.286-.223.324-.624.075-.909l-1.457-1.279c-.157-.139.052-.38.213-.241l1.491 1.308c.257.294.692.332.969.114.285-.22.316-.631.068-.916l-1.896-1.628c-.162-.135.048-.38.208-.242l1.944 1.669c.248.282.678.335.967.114.283-.22.349-.606-.002-.995-1.24-1.112-2.671-2.405-4.143-3.796-.355.488-2.176 1.502-3.279 1.502s-1.779-.675-1.96-1.343c-.157-.582.051-1.139.531-1.419.535-.313 1.055-.762 1.562-1.269-.789-.586-1.203-.398-2.067.013-.503.238-1.1.521-1.854.647l.438-1.67c1.327-.488 2.549-1.608 4.505-.083l.491-.552c.395-.447.911-.715 1.503-.715.436 0 .91.161 1.408.417 1.518.793 2.293 1.256 3.443 1.294l.394 1.508h-.008c-1.797.033-2.676-.508-4.516-1.47-.513-.263-.859-.318-1.1-.044-.984 1.12-2.031 2.309-3.192 3.063.573.458 2.019-.458 2.592-.92.25-.201.638-.468 1.128-.468.553 0 .955.331 1.244.619.68.68 2.57 2.389 3.407 3.142.434-.242.868-.435 1.311-.605l.383 1.467c-.319.134-.633.286-.95.461zm-11.037.875l.609-.747c.25-.3.215-.722-.08-.944-.296-.223-.737-.158-.986.14l-.61.749c-.251.298-.214.721.08.942s.737.159.987-.14zm1.328 1.006l.617-.755c.248-.297.213-.722-.082-.943-.294-.221-.734-.159-.984.142l-.616.754c-.251.3-.21.712.086.936.297.222.729.167.979-.134zm1.343.992l.608-.747c.251-.299.215-.721-.08-.944-.296-.222-.735-.157-.986.142l-.609.745c-.251.3-.213.724.082.945.293.221.734.16.985-.141zm1.865-.691c-.294-.224-.735-.159-.987.139l-.612.751c-.249.299-.213.722.082.943.295.221.735.16.986-.142l.61-.75c.253-.297.217-.72-.079-.941zm1.427 1.134l-.24-.212c-.063.239-.173.464-.332.65l-.358.441c.133.106.288.176.448.176.149 0 .295-.046.415-.138.284-.223.317-.632.067-.917zm5.201-10.889l1.974 7.562 3.484-.891-1.932-7.562-3.526.891zm-7.959-6.891l-.986.174.521 2.954.984-.174-.519-2.954zm3.82.174l-.985-.174-.521 2.954.985.174.521-2.954zm3.597 1.228l-.867-.5-1.5 2.598.867.5 1.5-2.598zm-11.133-.5l-.867.5 1.5 2.598.867-.5-1.5-2.598z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Mitra Pembangunan</h5>
@@ -97,8 +100,8 @@
     
                 <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMGMtMy4xNDggMC02IDIuNTUzLTYgNS43MDIgMCA0LjY4MiA0Ljc4MyA1LjE3NyA2IDEyLjI5OCAxLjIxNy03LjEyMSA2LTcuNjE2IDYtMTIuMjk4IDAtMy4xNDktMi44NTEtNS43MDItNi01LjcwMnptMCA4Yy0xLjEwNSAwLTItLjg5NS0yLTJzLjg5NS0yIDItMiAyIC44OTUgMiAyLS44OTUgMi0yIDJ6bTEyIDE2bC02LjcwNy0yLjQyNy01LjI5MyAyLjQyNy01LjU4MS0yLjQyNy02LjQxOSAyLjQyNyA0LTkgMy45Ni0xLjU4NGMuMzguNTE2Ljc0MSAxLjA4IDEuMDYxIDEuNzI5bC0zLjUyMyAxLjQxLTEuNzI1IDMuODggMi42NzItMS4wMSAxLjUwNi0yLjY4Ny0uNjM1IDMuMDQ0IDQuMTg5IDEuNzg5LjQ5NS0yLjAyMS40NjUgMi4wMjQgNC4xNS0xLjg5LS42MTgtMy4wMzMgMS41NzIgMi44OTYgMi43MzIuOTg5LTEuNzM5LTMuOTc4LTMuNTgxLTEuNDE1Yy4zMTktLjY1LjY4MS0xLjIxNSAxLjA2Mi0xLjczMWw0LjAyMSAxLjU4OCAzLjkzNiA5eiIvPjwvc3ZnPg==">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-3.148 0-6 2.553-6 5.702 0 4.682 4.783 5.177 6 12.298 1.217-7.121 6-7.616 6-12.298 0-3.149-2.851-5.702-6-5.702zm0 8c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2zm12 16l-6.707-2.427-5.293 2.427-5.581-2.427-6.419 2.427 4-9 3.96-1.584c.38.516.741 1.08 1.061 1.729l-3.523 1.41-1.725 3.88 2.672-1.01 1.506-2.687-.635 3.044 4.189 1.789.495-2.021.465 2.024 4.15-1.89-.618-3.033 1.572 2.896 2.732.989-1.739-3.978-3.581-1.415c.319-.65.681-1.215 1.062-1.731l4.021 1.588 3.936 9z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Pemetaan Pembangunan</h5>
@@ -106,10 +109,10 @@
                     </div>
                 </div>
     
-                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-left">
+                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTUuMDEgOS45NjhsLTMuOTYxLTMuOTY4aDEuOTY4cy45OTEtNC4xNzgtMi45ODUtNmM2LjE5MS4yMjIgNi45NzIgNiA2Ljk3MiA2aDEuOTY4bC0zLjk2MiAzLjk2OHptOC45OS0xLjkyM3YxMC44M2wtOSA1LjEyNXYtMTEuMTMybDktNC44MjN6bS01Ljk1OSA5LjM4OGwtLjM1LjE5OXYxLjcxM2wuMzUtLjE5NXYtMS43MTd6bS41ODQtLjMzM2wtLjM0NC4xOTV2MS43MTdsLjM0NC0uMTk1di0xLjcxN3ptLjgyLS40NjhsLS4zNDMuMTk2djEuNzE3bC4zNDMtLjE5NnYtMS43MTd6bS41NzUtLjMyNmwtLjM0Mi4xOTV2MS43MTdsLjM0Mi0uMTk1di0xLjcxN3ptLjU4NC0uMzMzbC0uMzQ5LjE5OXYxLjcxN2wuMzQ5LS4xOTl2LTEuNzE3em0uODQ0LS40ODFsLS4zNDMuMTk1djEuNzE3bC4yODktLjE2NS4wNTQtLjAzMXYtMS43MTZ6bS0xMC44NTEtMTIuNTM0Yy0uMzMxLS42MjktMS4wODEtMS4zNDgtMS43Mi0xLjMyNmwtNC42MDQgMi42IDEuOTkyIDEuMTcxIDQuMzMyLTIuNDQ1em0yLjM3MiA4LjcwOWwtMTAuMDk0LTUuOTM4LTIuODc1IDMuOTEgMTAuMTA4IDUuOTk3IDIuODYxLTMuOTY5em0tMTAuOTY5IDEuNDg0djQuMjk4bDExIDYuMjY1di04LjY3bC0yLjMzOSAzLjI0NS04LjY2MS01LjEzOHoiLz48L3N2Zz4=">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.01 9.968l-3.961-3.968h1.968s.991-4.178-2.985-6c6.191.222 6.972 6 6.972 6h1.968l-3.962 3.968zm8.99-1.923v10.83l-9 5.125v-11.132l9-4.823zm-5.959 9.388l-.35.199v1.713l.35-.195v-1.717zm.584-.333l-.344.195v1.717l.344-.195v-1.717zm.82-.468l-.343.196v1.717l.343-.196v-1.717zm.575-.326l-.342.195v1.717l.342-.195v-1.717zm.584-.333l-.349.199v1.717l.349-.199v-1.717zm.844-.481l-.343.195v1.717l.289-.165.054-.031v-1.716zm-10.851-12.534c-.331-.629-1.081-1.348-1.72-1.326l-4.604 2.6 1.992 1.171 4.332-2.445zm2.372 8.709l-10.094-5.938-2.875 3.91 10.108 5.997 2.861-3.969zm-10.969 1.484v4.298l11 6.265v-8.67l-2.339 3.245-8.661-5.138z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Lapor Aduan</h5>
@@ -117,10 +120,10 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-left">
+                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjE3OCAxMWgtMS4xNzh2LTIuMjA5Yy40NjggMCAuNzc0LS40NzQuOTQ0LS45OTcuNTg3LTEuODAzIDEuNTktNC41MTMgNC4wNTYtNi4yMTJ2My40MThjMCAuNTUyLjQ0OCAxIDEgMXMxLS40NDggMS0xdi00LjQzN2MuODY4LS4zMDkgMS44NjEtLjUxNiAzLS41ODV2My4wMjJjMCAuNTUyLjQ0OCAxIDEgMXMxLS40NDggMS0xdi0zYzEuMTM0LjA5NCAyLjEyOC4zMjcgMyAuNjYxdjQuMzM5YzAgLjU1Mi40NDggMSAxIDFzMS0uNDQ4IDEtMXYtMy4yNjljMi4zOTEgMS43IDMuNDYzIDQuMzA0IDQuMDU3IDYuMDYzLjE3NS41Mi40NzUuOTk3Ljk0My45OTd2Mi4yMDloLTEuMTc5Yy41NzUuNDU5IDEuMTc5IDEuMzYgMS4xNzkgMy4xMzEgMCAxLjYzLS45MDQgMy42ODYtMi44NzcgNC41MzEtMi4xNTMgMy40NDUtNS4wMjcgNS4zMzgtOC4xMjMgNS4zMzgtMy4wOTYgMC01Ljk3LTEuODkzLTguMTI0LTUuMzM4LTEuOTczLS44NDUtMi44NzYtMi45MDEtMi44NzYtNC41MzEgMC0xLjc3MS42MDMtMi42NzIgMS4xNzgtMy4xMzF6bTEyLjAyMiA3LjQ1OWgtNC40Yy4wMDQuMDEyLjYyNiAxLjc0IDIuMiAxLjc0IDEuNjM0IDAgMi4xOTYtMS43MjggMi4yLTEuNzR6bTQuNTE3LTcuNDU5aC0xMy40MzVsLS4wMTMuNTE1YzAgLjY2OC0uNjgyIDEuMTE0LTEuMjg4Ljg0NC0uMTY5LS4wNzUtLjQzLS4wNzMtLjYxNy4wNDktLjkxNy42MDEtLjgxOSAzLjg2NCAxLjQyNSA0LjYyOS45MTYuMzEzIDIuMzY0IDMuMTAzIDMuOTMuMzk4LjU0Mi0uOTM0IDIuMjUxLTEuMDM5IDMuMjgxLS4yOTcgMS4wMjktLjc0MiAyLjczOS0uNjM3IDMuMjguMjk3IDEuNTY2IDIuNzA1IDMuMDE0LS4wODUgMy45My0uMzk4IDIuMjQ0LS43NjUgMi4zNDItNC4wMjggMS40MjUtNC42MjktLjIxNS0uMTQtLjQ4Ny0uMTA2LS42MTYtLjA0OS0uNjA2LjI3MS0xLjI4OS0uMTc2LTEuMjg5LS44NDRsLS4wMTMtLjUxNXptLTkuNjk2Ljk5NmMtLjYzNCAwLTEuMTQ2LjYyLTEuMTQ2IDEuMzg1cy41MTIgMS4zODUgMS4xNDYgMS4zODVjLjYzMiAwIDEuMTQ2LS42MiAxLjE0Ni0xLjM4NXMtLjUxNC0xLjM4NS0xLjE0Ni0xLjM4NXptNy4xMDQgMS4zODVjMCAuNzY1LS41MTMgMS4zODUtMS4xNDYgMS4zODUtLjYzMyAwLTEuMTQ2LS42Mi0xLjE0Ni0xLjM4NXMuNTEzLTEuMzg1IDEuMTQ2LTEuMzg1Yy42MzMgMCAxLjE0Ni42MiAxLjE0NiAxLjM4NXoiLz48L3N2Zz4=">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24"><path d="M2.178 11h-1.178v-2.209c.468 0 .774-.474.944-.997.587-1.803 1.59-4.513 4.056-6.212v3.418c0 .552.448 1 1 1s1-.448 1-1v-4.437c.868-.309 1.861-.516 3-.585v3.022c0 .552.448 1 1 1s1-.448 1-1v-3c1.134.094 2.128.327 3 .661v4.339c0 .552.448 1 1 1s1-.448 1-1v-3.269c2.391 1.7 3.463 4.304 4.057 6.063.175.52.475.997.943.997v2.209h-1.179c.575.459 1.179 1.36 1.179 3.131 0 1.63-.904 3.686-2.877 4.531-2.153 3.445-5.027 5.338-8.123 5.338-3.096 0-5.97-1.893-8.124-5.338-1.973-.845-2.876-2.901-2.876-4.531 0-1.771.603-2.672 1.178-3.131zm12.022 7.459h-4.4c.004.012.626 1.74 2.2 1.74 1.634 0 2.196-1.728 2.2-1.74zm4.517-7.459h-13.435l-.013.515c0 .668-.682 1.114-1.288.844-.169-.075-.43-.073-.617.049-.917.601-.819 3.864 1.425 4.629.916.313 2.364 3.103 3.93.398.542-.934 2.251-1.039 3.281-.297 1.029-.742 2.739-.637 3.28.297 1.566 2.705 3.014-.085 3.93-.398 2.244-.765 2.342-4.028 1.425-4.629-.215-.14-.487-.106-.616-.049-.606.271-1.289-.176-1.289-.844l-.013-.515zm-9.696.996c-.634 0-1.146.62-1.146 1.385s.512 1.385 1.146 1.385c.632 0 1.146-.62 1.146-1.385s-.514-1.385-1.146-1.385zm7.104 1.385c0 .765-.513 1.385-1.146 1.385-.633 0-1.146-.62-1.146-1.385s.513-1.385 1.146-1.385c.633 0 1.146.62 1.146 1.385z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Request Pembangunan</h5>
@@ -128,10 +131,10 @@
                     </div>
                 </div>
     
-                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-left">
+                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjEuMTY5IDE5Ljc1NGMuNTIyLS43OS44MzEtMS43MzUuODMxLTIuNzU0IDAtMi43NjEtMi4yMzgtNS01LTVzLTUgMi4yMzktNSA1IDIuMjM4IDUgNSA1YzEuMDE5IDAgMS45NjQtLjMwOSAyLjc1NS0uODMybDIuODMxIDIuODMyIDEuNDE0LTEuNDE0LTIuODMxLTIuODMyem0tNC4xNjkuMjQ2Yy0xLjY1NCAwLTMtMS4zNDYtMy0zczEuMzQ2LTMgMy0zIDMgMS4zNDYgMyAzLTEuMzQ2IDMtMyAzem0tNC44OSAyaC03LjExbDIuNTk5LTNoMi42OTZjLjM0NSAxLjE1Mi45NzYgMi4xOCAxLjgxNSAzem0tMi4xMS01aC0xMHYtMTdoMjJ2MTIuMTFjLS41NzQtLjU4Ni0xLjI1MS0xLjA2OC0yLTEuNDI1di04LjY4NWgtMTh2MTNoOC4yOTVjLS4xOS42MzQtLjI5NSAxLjMwNS0uMjk1IDJ6bS0yLjEzMS00LjM3MmwuOTQ1LTUuNzU5Ljk2NSA0LjE0NWMuMDk2LjQyNS42ODYuNDczLjg0Ny4wNjNsLjg5NS0yLjMyOC40NzkuOTc0Yy4wOC4xNjkuMTY0LjI3Ny40MzguMjc3aDEuMjA4di0uODc3aC0uOTIxbC0uODM2LTEuNjI0Yy0uMTU2LS4zNjQtLjY3Ny0uMzU2LS44Mi4wMTRsLS43NDEgMS44OTUtMS4xNDQtNS4wNjJjLS4wNTItLjIzMi0uMjQyLS4zNDYtLjQzLS4zNDYtLjIgMC0uNC4xMjctLjQ0LjM3M2wtLjk0OCA1Ljg0Ny0uOTY5LTMuNmMtLjEwOS0uNDMtLjcxNS0uNDU1LS44NTMtLjAyOWwtLjcyMSAyLjU0NWgtLjgyM3YuODY0aDEuMTcyYy4xNiAwIC4zMzQtLjEzLjM4LS4yODRsLjQwNi0xLjI1NyAxLjA0MyA0LjIwNmMuMTE3LjQ2OC43OTEuNDM3Ljg2OC0uMDM3eiIvPjwvc3ZnPg==">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.169 19.754c.522-.79.831-1.735.831-2.754 0-2.761-2.238-5-5-5s-5 2.239-5 5 2.238 5 5 5c1.019 0 1.964-.309 2.755-.832l2.831 2.832 1.414-1.414-2.831-2.832zm-4.169.246c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zm-4.89 2h-7.11l2.599-3h2.696c.345 1.152.976 2.18 1.815 3zm-2.11-5h-10v-17h22v12.11c-.574-.586-1.251-1.068-2-1.425v-8.685h-18v13h8.295c-.19.634-.295 1.305-.295 2zm-2.131-4.372l.945-5.759.965 4.145c.096.425.686.473.847.063l.895-2.328.479.974c.08.169.164.277.438.277h1.208v-.877h-.921l-.836-1.624c-.156-.364-.677-.356-.82.014l-.741 1.895-1.144-5.062c-.052-.232-.242-.346-.43-.346-.2 0-.4.127-.44.373l-.948 5.847-.969-3.6c-.109-.43-.715-.455-.853-.029l-.721 2.545h-.823v.864h1.172c.16 0 .334-.13.38-.284l.406-1.257 1.043 4.206c.117.468.791.437.868-.037z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Monitoring Pembangunan</h5>
@@ -139,10 +142,10 @@
                     </div>
                 </div>
     
-                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-right">
+                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTcgMTJjLTMuMzEzIDAtNiAyLjY4Ny02IDZzMi42ODcgNiA2IDYgNi0yLjY4NyA2LTYtMi42ODctNi02LTZ6bS41IDguNDc0di41MjZoLS41di0uNDk5Yy0uNTE4LS4wMDktMS4wNTMtLjEzMi0xLjUtLjM2M2wuMjI4LS44MjJjLjQ3OC4xODYgMS4xMTQuMzgzIDEuNjEyLjI3LjU3NC0uMTMuNjkyLS43MjEuMDU3LTEuMDA1LS40NjUtLjIxNy0xLjg4OS0uNDAyLTEuODg5LTEuNjIyIDAtLjY4MS41Mi0xLjI5MiAxLjQ5Mi0xLjQyNXYtLjUzNGguNXYuNTA5Yy4zNjIuMDEuNzY4LjA3MyAxLjIyMS4yMWwtLjE4MS44MjRjLS4zODQtLjEzNS0uODA4LS4yNTctMS4yMjItLjIzMi0uNzQ0LjA0My0uODEuNjg4LS4yOS45NTguODU2LjQwMiAxLjk3Mi43IDEuOTcyIDEuNzczLjAwMS44NTgtLjY3MiAxLjMxNS0xLjUgMS40MzJ6bTEuNjI0LTEwLjE3OWMxLjEzMi0uMjIzIDIuMTYyLS42MjYgMi44NzYtMS4xOTd2LjY1MmMwIC40OTktLjM4Ni45NTUtMS4wMDcgMS4zMjgtLjU4MS0uMzM3LTEuMjA4LS42LTEuODY5LS43ODN6bS0yLjEyNC01Ljc5NWMyLjY3MyAwIDUtMS4wMDcgNS0yLjI1cy0yLjMyNy0yLjI1LTUtMi4yNWMtMi42NzIgMC01IDEuMDA3LTUgMi4yNXMyLjMyOCAyLjI1IDUgMi4yNXptLjA5My0yLjAwOWMtLjI5OS0uMDktMS4yMTQtLjE2Ni0xLjIxNC0uNjc1IDAtLjI4NC4zMzQtLjUzNy45NTgtLjU5M3YtLjIyM2guMzIxdi4yMTFjLjIzNC4wMDUuNDk0LjAzLjc4NC4wOWwtLjExNi4zNDJjLS4yMjEtLjA1MS0uNDY3LS4wOTktLjcwOC0uMDk5bC0uMDcyLjAwMWMtLjQ4Mi4wMi0uNTIxLjI4Ny0uMTg4LjM5OS41NDcuMTY5IDEuMjY3LjI5MiAxLjI2Ny43NCAwIC4zNTctLjQzNC41NDgtLjk2Ny41OTZ2LjIyaC0uMzIxdi0uMjA4Yy0uMzI4LS4wMDMtLjY3Ni0uMDU2LS45NjItLjE1MmwuMTQ3LS4zNDNjLjI0NC4wNjMuNTUyLjEyNi44MjguMTI2bC4yMDgtLjAxNGMuMzY5LS4wNTMuNDQzLS4zLjAzNS0uNDE4em0tMTEuMDkzIDEzLjAwOWMxLjQ0NSAwIDIuNzc1LS4zMDEgMy43MDUtLjc2OC4zMTEtLjY5LjcxNC0xLjMyOSAxLjE5OC0xLjg5OS0uNDUxLTEuMDQzLTIuNTM5LTEuODMzLTQuOTAzLTEuODMzLTIuNjcyIDAtNSAxLjAwNy01IDIuMjVzMi4zMjggMi4yNSA1IDIuMjV6bS4wOTMtMi4wMDljLS4yOTktLjA5LTEuMjE0LS4xNjYtMS4yMTQtLjY3NSAwLS4yODQuMzM1LS41MzcuOTU4LS41OTN2LS4yMjNoLjMyMXYuMjExYy4yMzQuMDA1LjQ5NC4wMy43ODQuMDlsLS4xMTcuMzQyYy0uMjItLjA1MS0uNDY2LS4wOTktLjcwNy0uMDk5bC0uMDcyLjAwMWMtLjQ4Mi4wMi0uNTIuMjg3LS4xODguMzk5LjU0Ny4xNjkgMS4yNjcuMjkyIDEuMjY3Ljc0IDAgLjM1Ny0uNDM0LjU0OC0uOTY3LjU5NnYuMjJoLS4zMjF2LS4yMDhjLS4zMjktLjAwMy0uNjc2LS4wNTYtLjk2Mi0uMTUybC4xNDctLjM0M2MuMjQ0LjA2My41NTIuMTI2LjgyOC4xMjZsLjIwOC0uMDE0Yy4zNjgtLjA1My40NDMtLjMuMDM1LS40MTh6bTQuMDAzIDguNTMxYy0uOTE5LjU5LTIuNDQuOTc4LTQuMDk2Ljk3OC0yLjY3MiAwLTUtMS4wMDctNS0yLjI1di0uNjUyYzEuMTQ2LjkxOCAzLjEwOSAxLjQwMiA1IDEuNDAyIDEuMjM2IDAgMi40OTktLjIxMSAzLjU0OS0uNjExLjE1My4zOTQuMzM2Ljc3My41NDcgMS4xMzN6bS05LjA5Ni0zLjc3MnYtLjY1MWMxLjE0Ni45MTcgMy4xMDkgMS40MDEgNSAxLjQwMSAxLjAzOSAwIDIuMDk0LS4xNTEgMy4wMjgtLjQzNS4wMzMuNDY5LjEwNy45MjYuMjE4IDEuMzctLjg4OC4zNDctMi4wMjQuNTY1LTMuMjQ2LjU2NS0yLjY3MiAwLTUtMS4wMDctNS0yLjI1em0wLTIuNXYtLjY1MmMxLjE0Ni45MTggMy4xMDkgMS40MDIgNSAxLjQwMiAxLjEyNyAwIDIuMjc1LS4xNzYgMy4yNjYtLjUwOS0uMTI4LjQ5My0uMjEgMS4wMDItLjI0MSAxLjUyNi0uODU0LjI5OC0xLjkwMy40ODMtMy4wMjUuNDgzLTIuNjcyIDAtNS0xLjAwNy01LTIuMjV6bTExLTExdi0uNjUyYzEuMTQ2LjkxOCAzLjEwOSAxLjQwMiA1IDEuNDAyIDEuODkyIDAgMy44NTQtLjQ4NCA1LTEuNDAydi42NTJjMCAxLjI0My0yLjMyNyAyLjI1LTUgMi4yNS0yLjY3MiAwLTUtMS4wMDctNS0yLjI1em0wIDV2LS42NTJjLjcxMy41NzEgMS43NDQuOTc0IDIuODc2IDEuMTk3LS42NjEuMTgzLTEuMjg3LjQ0Ni0xLjg2OC43ODMtLjYyMi0uMzczLTEuMDA4LS44MjktMS4wMDgtMS4zMjh6bTAtMi41di0uNjUxYzEuMTQ2LjkxNyAzLjEwOSAxLjQwMSA1IDEuNDAxIDEuODkyIDAgMy44NTQtLjQ4NCA1LTEuNDAxdi42NTFjMCAxLjI0My0yLjMyNyAyLjI1LTUgMi4yNS0yLjY3MiAwLTUtMS4wMDctNS0yLjI1eiIvPjwvc3ZnPg==">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17 12c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6-2.687-6-6-6zm.5 8.474v.526h-.5v-.499c-.518-.009-1.053-.132-1.5-.363l.228-.822c.478.186 1.114.383 1.612.27.574-.13.692-.721.057-1.005-.465-.217-1.889-.402-1.889-1.622 0-.681.52-1.292 1.492-1.425v-.534h.5v.509c.362.01.768.073 1.221.21l-.181.824c-.384-.135-.808-.257-1.222-.232-.744.043-.81.688-.29.958.856.402 1.972.7 1.972 1.773.001.858-.672 1.315-1.5 1.432zm1.624-10.179c1.132-.223 2.162-.626 2.876-1.197v.652c0 .499-.386.955-1.007 1.328-.581-.337-1.208-.6-1.869-.783zm-2.124-5.795c2.673 0 5-1.007 5-2.25s-2.327-2.25-5-2.25c-2.672 0-5 1.007-5 2.25s2.328 2.25 5 2.25zm.093-2.009c-.299-.09-1.214-.166-1.214-.675 0-.284.334-.537.958-.593v-.223h.321v.211c.234.005.494.03.784.09l-.116.342c-.221-.051-.467-.099-.708-.099l-.072.001c-.482.02-.521.287-.188.399.547.169 1.267.292 1.267.74 0 .357-.434.548-.967.596v.22h-.321v-.208c-.328-.003-.676-.056-.962-.152l.147-.343c.244.063.552.126.828.126l.208-.014c.369-.053.443-.3.035-.418zm-11.093 13.009c1.445 0 2.775-.301 3.705-.768.311-.69.714-1.329 1.198-1.899-.451-1.043-2.539-1.833-4.903-1.833-2.672 0-5 1.007-5 2.25s2.328 2.25 5 2.25zm.093-2.009c-.299-.09-1.214-.166-1.214-.675 0-.284.335-.537.958-.593v-.223h.321v.211c.234.005.494.03.784.09l-.117.342c-.22-.051-.466-.099-.707-.099l-.072.001c-.482.02-.52.287-.188.399.547.169 1.267.292 1.267.74 0 .357-.434.548-.967.596v.22h-.321v-.208c-.329-.003-.676-.056-.962-.152l.147-.343c.244.063.552.126.828.126l.208-.014c.368-.053.443-.3.035-.418zm4.003 8.531c-.919.59-2.44.978-4.096.978-2.672 0-5-1.007-5-2.25v-.652c1.146.918 3.109 1.402 5 1.402 1.236 0 2.499-.211 3.549-.611.153.394.336.773.547 1.133zm-9.096-3.772v-.651c1.146.917 3.109 1.401 5 1.401 1.039 0 2.094-.151 3.028-.435.033.469.107.926.218 1.37-.888.347-2.024.565-3.246.565-2.672 0-5-1.007-5-2.25zm0-2.5v-.652c1.146.918 3.109 1.402 5 1.402 1.127 0 2.275-.176 3.266-.509-.128.493-.21 1.002-.241 1.526-.854.298-1.903.483-3.025.483-2.672 0-5-1.007-5-2.25zm11-11v-.652c1.146.918 3.109 1.402 5 1.402 1.892 0 3.854-.484 5-1.402v.652c0 1.243-2.327 2.25-5 2.25-2.672 0-5-1.007-5-2.25zm0 5v-.652c.713.571 1.744.974 2.876 1.197-.661.183-1.287.446-1.868.783-.622-.373-1.008-.829-1.008-1.328zm0-2.5v-.651c1.146.917 3.109 1.401 5 1.401 1.892 0 3.854-.484 5-1.401v.651c0 1.243-2.327 2.25-5 2.25-2.672 0-5-1.007-5-2.25z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Transparasi Anggaran</h5>
@@ -150,10 +153,10 @@
                     </div>
                 </div>
     
-                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-right">
+                <div class="col-md-3 m-2 shadow bg-white" data-aos="fade-down">
                     <div class="row align-items-center">
-                        <div class="col-md-4 align-self-center p-3">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNC41NzQgMTYuOTg5Yy0xLjc2OC42NDctMy43MTktLjI3NS00LjM2NS0yLjA2LS42NDctMS43ODUuMjYyLTMuNzU3IDIuMDI3LTQuNDA0bDMuMjQyLTEuMTg3IDIuMzM4IDYuNDY0LTMuMjQyIDEuMTg3em02LjI4MiAzLjE3MmMtLjQzNy0uMTUxLS44MTQtLjQzLTEuMDg5LS44bC0xLjYzNS0yLjIwMi0zLjMwMSAxLjIwOSAyLjYwMiAzLjM1M2MuMjkyLjM3Ni43OS41MiAxLjIzNy4zNTZsMi4yMTYtLjgxYy4yMjktLjA4NC4zODItLjMwNy4zODEtLjU1My0uMDAyLS4yNDYtLjE1Ni0uNDY0LS4zODktLjU0NWwtLjAyMi0uMDA4em0tNC4wOS0xMS4yOTRsMi4zMzggNi40NjRjMi4xNTUtLjQxNyA1LjA3Ny0uNDAxIDguODk2LjQwMWwtNC42NzUtMTIuOTI3Yy0yLjQ3NiAzLjE2NS00LjY2MyA1LjAwNC02LjU1OSA2LjA2MnptMTAuNzk1LTMuMTAyYy44NTYuNDExIDEuNTU2IDEuMTQ5IDEuODkzIDIuMTE3LjMzOS45NjcuMjU0IDEuOTgtLjE1NyAyLjgzNmwxLjQwNy42NzhjLjU4NS0xLjIxNi43MDgtMi42NTYuMjI3LTQuMDMtLjQ4MS0xLjM3NS0xLjQ3NC0yLjQyNC0yLjY4OS0zLjAwOWwtLjY4MSAxLjQwOHptMS4xODgtMi40NjVjMS40ODYuNzE1IDIuNjk4IDEuOTk4IDMuMjg2IDMuNjc4cy40MzggMy40NDEtLjI3NyA0LjkyN2wxLjQ0My42OTZjLjg5My0xLjg1NyAxLjA3OS00LjA1NS4zNDYtNi4xNTMtLjczNS0yLjA5Ny0yLjI0Ny0zLjY5OC00LjEwMi00LjU5MWwtLjY5NiAxLjQ0M3oiLz48L3N2Zz4=">
+                        <div class="col-md-4 align-self-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.574 16.989c-1.768.647-3.719-.275-4.365-2.06-.647-1.785.262-3.757 2.027-4.404l3.242-1.187 2.338 6.464-3.242 1.187zm6.282 3.172c-.437-.151-.814-.43-1.089-.8l-1.635-2.202-3.301 1.209 2.602 3.353c.292.376.79.52 1.237.356l2.216-.81c.229-.084.382-.307.381-.553-.002-.246-.156-.464-.389-.545l-.022-.008zm-4.09-11.294l2.338 6.464c2.155-.417 5.077-.401 8.896.401l-4.675-12.927c-2.476 3.165-4.663 5.004-6.559 6.062zm10.795-3.102c.856.411 1.556 1.149 1.893 2.117.339.967.254 1.98-.157 2.836l1.407.678c.585-1.216.708-2.656.227-4.03-.481-1.375-1.474-2.424-2.689-3.009l-.681 1.408zm1.188-2.465c1.486.715 2.698 1.998 3.286 3.678s.438 3.441-.277 4.927l1.443.696c.893-1.857 1.079-4.055.346-6.153-.735-2.097-2.247-3.698-4.102-4.591l-.696 1.443z"/></svg>
                         </div>
                         <div class="col-md-8">
                             <h5>Pengumuman</h5>
@@ -165,29 +168,74 @@
         </div>
     </section>
 
-    <section class="testimoni mt-5" id="testimoni" data-aos="flip-left">
+    <section class="testimoni mt-5" data-aos="fade-up">
+        <div class="container p-5">
+            <div class="text-center mb-5" id="testimoni">
+                <h2 id="testimoni">Testimoni</h2>
+                <hr>
+            </div>
+
+            <div class="row justify-content-center align-items-cente text-center">
+                <div class="col-md-3 m-3 align-self-center shadow p-3" data-aos="zoom-in">
+                    <div class="box">
+                        <div class="glass"></div>
+                        <div class="content">
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24"><path d="M12 0c-5.083 0-8.465 4.949-3.733 13.678 1.596 2.945-1.725 3.641-5.09 4.418-3.073.709-3.187 2.235-3.177 4.904l.004 1h23.99l.004-.969c.012-2.688-.093-4.223-3.177-4.935-3.438-.794-6.639-1.49-5.09-4.418 4.719-8.912 1.251-13.678-3.731-13.678m0 1c1.89 0 3.39.764 4.225 2.15 1.354 2.251.866 5.824-1.377 10.06-.577 1.092-.673 2.078-.283 2.932.937 2.049 4.758 2.632 6.032 2.928 2.303.534 2.412 1.313 2.401 3.93h-21.998c-.01-2.615.09-3.396 2.401-3.93 1.157-.266 5.138-.919 6.049-2.94.387-.858.284-1.843-.304-2.929-2.231-4.115-2.744-7.764-1.405-10.012.84-1.412 2.353-2.189 4.259-2.189"/></svg>
+                            <h2>Mike</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 m-3 align-self-center shadow p-3" data-aos="zoom-in">
+                    <div class="box">
+                        <div class="glass"></div>
+                        <div class="content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.995 24h-1.995c0-3.104.119-3.55-1.761-3.986-2.877-.664-5.594-1.291-6.584-3.458-.361-.791-.601-2.095.31-3.814 2.042-3.857 2.554-7.165 1.403-9.076-1.341-2.229-5.413-2.241-6.766.034-1.154 1.937-.635 5.227 1.424 9.025.93 1.712.697 3.02.338 3.815-.982 2.178-3.675 2.799-6.525 3.456-1.964.454-1.839.87-1.839 4.004h-1.995l-.005-1.241c0-2.52.199-3.975 3.178-4.663 3.365-.777 6.688-1.473 5.09-4.418-4.733-8.729-1.35-13.678 3.732-13.678 4.983 0 8.451 4.766 3.732 13.678-1.551 2.928 1.65 3.624 5.09 4.418 2.979.688 3.178 2.143 3.178 4.663l-.005 1.241zm-13.478-6l.91 2h1.164l.92-2h-2.994zm2.995 6l-.704-3h-1.615l-.704 3h3.023z"/></svg>
+                            <h2>John</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 m-3 align-self-center shadow p-3" data-aos="zoom-in">
+                    <div class="box">
+                        <div class="glass"></div>
+                        <div class="content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.823 19.307c-2.967-.681-6.578-2.437-5.514-4.723.684 1.125 2.8 1.777 4.449.804-4.747-1.204 2.334-9.471-3.871-14.105-1.134-.853-2.526-1.283-3.911-1.283-1.379 0-2.752.425-3.863 1.283-6.206 4.634.876 12.901-3.872 14.105 1.652.974 3.771.292 4.451-.804 1.064 2.287-2.551 4.043-5.514 4.723-2.979.683-3.178 2.468-3.178 4.004l.005.689h1.996c0-1.96-.032-2.364 1.625-2.744 1.633-.375 5.568-1.53 6.855-4.162 1.011-2.067-.02-3.45-1.528-6.722-.133 1.109-1.001 1.613-1.001 1.613-.049-.692-.15-1.366-.241-1.967-.486-3.225-.638-5.463 1.623-7.152 1.498-1.156 3.787-1.159 5.357.019 2.236 1.67 2.084 3.909 1.598 7.133-.089.591-.188 1.253-.238 1.933 0 0-.831-.404-.975-1.604-1.535 3.296-2.573 4.669-1.556 6.747 1.286 2.632 5.223 3.788 6.855 4.162 1.67.384 1.625.8 1.625 2.744h1.994l.005-.693c.001-1.536-.199-3.318-3.176-4z"/></svg>
+                            <h2>Sarah</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product" data-aos="fade-down">
         <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-7 align-self-center">
-                    <div class="text-center">
-                        <div class="mb-5">
-                            <h2>Testimoni</h2>
-                            <hr style="border-color: black">
-                        </div>
-
-                        <div class="mt-5">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNSIgdmlld0JveD0iMCAwIDI0IDI1Ij48cGF0aCBkPSJNMTYuNSAxMy41YzAgLjgyOC0uNTYgMS41LTEuMjUgMS41cy0xLjI1LS42NzItMS4yNS0xLjUuNTYtMS41IDEuMjUtMS41IDEuMjUuNjcyIDEuMjUgMS41em0tNy43NS0xLjVjLS42OSAwLTEuMjUuNjcyLTEuMjUgMS41cy41NiAxLjUgMS4yNSAxLjUgMS4yNS0uNjcyIDEuMjUtMS41LS41Ni0xLjUtMS4yNS0xLjV6bTE1LjI1IDIuMzEzYzAgMS43NjUtLjk4NSAzLjk5MS0zLjEzOSA0LjkwNi0yLjA2MyAzLjI5NS00Ljk4NyA1Ljc4MS04Ljg2MSA1Ljc4MS0zLjc0MSAwLTYuODQ2LTIuNTYyLTguODYxLTUuNzgxLTIuMTU0LS45MTYtMy4xMzktMy4xNDItMy4xMzktNC45MDYgMC0yLjA1My43NTQtMy4wMjYgMS40MTctMy40ODktLjM5LTEuNTI0LTEuMDMtNS4xNDYuOTYzLTcuNDA5LjkzOC0xLjA2NSAyLjQ2NC0xLjU0IDQuMTItMS4yNzQuNzE5LTEuNTMyIDMuNjEyLTIuMTQxIDUuNS0yLjE0MSAzIDAgNi42MDkuNjQxIDkuMTQxIDMuNTE2IDEuOTY5IDIuMjM2IDEuNjQ4IDUuNzQxIDEuMzg4IDcuMjY5LjY3Ni40NDYgMS40NzEgMS40MTkgMS40NzEgMy41Mjh6bS05LjYgNC42ODdoLTQuOHMuNjc4IDEuODgzIDIuNCAxLjg4M2MxLjc4OCAwIDIuNC0xLjg4MyAyLjQtMS44ODN6bTcuMDYzLTYuNTA4Yy00LjExLjM5My03Ljc3OC0zLjA1OC05LjA3My01LjI3NC0uMDgxLjgwOS4xODYgMi41NTcuOTY5IDMuMzU1LTMuMTc1LjA2NC01LjgzNS0xLjU5Mi03LjQ2LTMuODY4LS44MzcgMS4zOTktMS4yNDIgMy4wODgtMS4yNDIgNC43NzUgMCAuNzIyLS43NDYgMS4yMDgtMS40MDYuOTE0LS4xNC0uMDYzLS40MzYtLjEwMS0uNjcxLjA1My0xIC42NDgtLjg5NSA0LjE4MyAxLjU1MyA1LjAxMi4yMjQuMDc2LjQxMy4yMjguNTM2LjQzLjY1NSAxLjA4NiAxLjM1NCAxLjk4IDIuMDg2IDIuNzIyLjkyMi42MzMgMS4wNTYtMS44NzUgMS42NjctMi43Mi42ODYtLjk0OSAyLjQ1NS0xLjEyNiAzLjU3OC0uMzIyIDEuMTI0LS44MDQgMi44OTItLjYyNyAzLjU3OC4zMjIuNjExLjg0Ni43NDUgMy4zNTQgMS42NjcgMi43Mi43MzEtLjc0MSAxLjQzLTEuNjM2IDIuMDg2LTIuNzIyLjEyMy0uMjAyLjMxMy0uMzU0LjUzNi0uNDMgMi4zNjMtLjggMi41OTYtNC4xODUgMS41OTYtNC45Njd6Ii8+PC9zdmc+" data-aos="fade-up">
-                            <hr style="border-color: black; width: 50%;" class="mt-5">
-                            <blockquote style="border-left: none;" data-aos="fade-left">
-                                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, facere expedita. Deserunt, nihil fugiat qui tenetur sunt placeat accusamus unde possimus illo eveniet rem, nesciunt incidunt est dicta quidem voluptate.</span>
-                                <footer>
-                                    <span>
-                                        Mike John
-                                    </span>
-                                </footer>
-                            </blockquote>
-                        </div>
-
+            <div class="text-center mb-5 pt-5" id="product">
+                <h2 id="product">Products</h2>
+                <hr style="border-color: black;">
+            </div>
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-md-3 align-self-center m-3 p-5 shadow" data-aos="zoom-in">
+                    <div class="card">
+                        <i class="fas fa-drumstick-bite fa-7x"></i>
+                        <h2>Daging</h2>
+                        <span>Berbagai macam daging</span>
+                    </div>
+                </div>
+                <div class="col-md-3 align-self-center m-3 p-5 shadow" data-aos="zoom-in">
+                    <div class="card">
+                        <i class="fas fa-egg fa-7x"></i>
+                        <h2>Telur</h2>
+                        <span>Berbagai macam telur</span>
+                    </div>
+                </div>
+                <div class="col-md-3 align-self-center m-3 p-5 shadow" data-aos="zoom-in">
+                    <div class="card">
+                        <i class="fas fa-coffee fa-7x"></i>
+                        <h2>Coffee</h2>
+                        <span>Biji kopi berkualitas</span>
                     </div>
                 </div>
             </div>
@@ -198,7 +246,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center" id="row" style="padding-top: 3rem;">
 
-                <div class="col-md-6 align-self-center" style="margin-top: 150px;" data-aos="fade-left">
+                <div class="col-md-6 align-self-center" style="margin-top: 150px;" data-aos="fade-up">
                     <span>Alamat</span>
                     <hr>
                     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -217,7 +265,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center" style="width: 100%; margin-top: 50px;" data-aos="fade-right">
+                <div class="text-center" style="width: 100%; margin-top: 50px;" data-aos="fade-up">
                     <hr style="border-color: white;">
                     <span>&copy 2021 <a href="https://zulfikar-dityaa.github.io/" style="color: var(--rose)">Zulfikar Ditya</a></span>
                 </div>
