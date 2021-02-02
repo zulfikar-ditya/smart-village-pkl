@@ -39,15 +39,18 @@ class MitraController extends Controller
         ];
     }
 
+    public function beforeAction($action)  {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
+    }
+
     /**
      * Lists all Mitra models.
      * @return mixed
      */
     public function actionIndex()
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $searchModel = new MitraSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -65,9 +68,6 @@ class MitraController extends Controller
      */
     public function actionView($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -80,9 +80,6 @@ class MitraController extends Controller
      */
     public function actionCreate()
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $model = new Mitra();
 
         if (Yii::$app->request->isPost) {
@@ -114,9 +111,6 @@ class MitraController extends Controller
      */
     public function actionUpdate($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $model = $this->findModel($id);
 
         if (Yii::$app->request->isPost) {
@@ -148,9 +142,6 @@ class MitraController extends Controller
      */
     public function actionDelete($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

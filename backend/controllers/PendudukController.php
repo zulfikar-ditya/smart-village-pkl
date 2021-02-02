@@ -43,15 +43,18 @@ class PendudukController extends Controller
         ];
     }
 
+    public function beforeAction($action)  {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
+    }
+
     /**
      * Lists all Penduduk models.
      * @return mixed
      */
     public function actionIndex()
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $searchModel = new PendudukSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -69,9 +72,6 @@ class PendudukController extends Controller
      */
     public function actionView($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -84,9 +84,6 @@ class PendudukController extends Controller
      */
     public function actionCreate()
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $model = new Penduduk();
         $agama = Agama::find()->all();
         $pekerjaan = Pekerjaan::find()->all();
@@ -115,9 +112,6 @@ class PendudukController extends Controller
      */
     public function actionUpdate($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $model = $this->findModel($id);
         $agama = Agama::find()->all();
         $pekerjaan = Pekerjaan::find()->all();
@@ -145,9 +139,6 @@ class PendudukController extends Controller
      */
     public function actionDelete($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
