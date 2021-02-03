@@ -28,58 +28,67 @@ html {
 
 .bg-cool-gray {
     background: var(--cool-gray);
+    color: white;
 }
 
 .bg-gray {
     background: var(--gray);
+    color: white;
 }
 
-.bg-tru--true-gray {
+.bg--true-gray {
     background: var(--true-gray);
+    color: white;
 }
 
 .bg-warm--warm-gray {
     background: var(--warm-gray);
+    color: white;
 }
 
 .bg-red {
     background: var(--red);
+    color: white;
 }
 
 .bg-orange {
     background: var(--orange);
+    color: white;
 }
 
 .bg-amber {
     background: var(--amber);
+    color: white;
 }
 
 .bg-yellow {
     background: var(--yellow);
+    color: white;
 }
 
 .bg-lime {
     background: var(--lime);
+    color: white;
 }
 
 .bg-green {
     background: var(--green);
-}
-
-.bg-green {
-    background: var(--green);
+    color: white;
 }
 
 .bg-emarald {
     background: var(--emarald);
+    color: white;
 }
 
 .bg-teal {
     background: var(--teal);
+    color: white;
 }
 
 .bg-cyan {
     background: var(--cyan);
+    color: white;
 }
 
 .bg-light-blue {
@@ -88,26 +97,32 @@ html {
 
 .bg-blue {
     background: var(--blue);
+    color: white;
 }
 
 .bg-indigo {
     background: var(--indigo);
+    color: white;
 }
 
 .bg-violet {
     background: var(--violet);
+    color: white;
 }
 
 .bg-fuchsia {
     background: var(--fuchsia);
+    color: white;
 }
 
 .bg-pink {
     background: var(--pink);
+    color: white;
 }
 
 .bg-rose {
     background: var(--rose);
+    color: white;
 }
 
 .bg-white {
@@ -195,8 +210,7 @@ html {
 }
 
 .nav > li > form > button {
-    background-color: #EF4444;
-    border-radius: 10px;
+    background-color: transparent;
     padding: 10px;
     border: none;
     border-color: none;
@@ -426,6 +440,14 @@ html {
     padding-bottom: 3rem;
 }
 
+.rounded-1 {
+    border-radius: 10px;
+}
+
+.text-white {
+    color: white;
+}
+
 .product .container .row .col-md-3 {
     border-radius: 10px;
 }
@@ -536,6 +558,22 @@ html {
     border-color: black;
 }
 
+.container#dashboard .row .col-md-3:hover {
+    transform: translateY(-10px);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .4);
+}
+
+.container#dashboard .row .col-md-3 .card svg {
+    fill: white;
+    height: 80px;
+    width: 80px;
+}
+
+.container#dashboard .row .col-md-3 a {
+    color: white;
+    text-decoration: underline;
+}
+
 @media (max-width: 992px) {
     .pembangunan .container .row .col-md-3 {
         width: 50%;
@@ -549,7 +587,8 @@ html {
     .site-signup .container .row .col-md-4,
     .site-reset-password .container .row .col-md-4,
     .container .site-resend-verification-email .row .col-md-4,
-    .container .site-request-password-reset .row .col-md-4 {
+    .container .site-request-password-reset .row .col-md-4,
+    .container#dashboard .row .col-md-3 {
         width: 50%;
     }
 
@@ -576,7 +615,8 @@ html {
     .site-signup .container .row .col-md-4,
     .site-reset-password .container .row .col-md-4,
     .container .site-resend-verification-email .row .col-md-4,
-    .container .site-request-password-reset .row .col-md-4{
+    .container .site-request-password-reset .row .col-md-4,
+    .container#dashboard .row .col-md-3 {
         width: 90%;
     }
 
@@ -587,12 +627,4 @@ html {
     .site-error .alert {
         width: 90%;
     }
-}
-
-.bg-cyan {
-    color: white;
-}
-
-.rounded-1 {
-    border-radius: 10px;
 }

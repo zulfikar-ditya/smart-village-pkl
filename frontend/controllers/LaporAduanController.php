@@ -48,10 +48,18 @@ class LaporAduanController extends Controller
     {
         // $searchModel = new LaporAduanSearch();
         // $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $data = LaporAduan::find()->where(['user_id' => Yii::$app->user->identity->id])->all();
+        $data = LaporAduan::find()->where(['user_id' => Yii::$app->user->identity->id]);
+        $pages = new \yii\data\Pagination(
+            [
+                'totalCount' => $data->count(),
+                'pageSize' => 25
+            ]
+        );
+        $models = $data->offset($pages->offset)->limit($pages->limit)->orderBy(['id' => SORT_DESC])->all();
 
         return $this->render('index', [
-            'data' => $data,
+            'data' => $models,
+            'pages' => $pages
         ]);
     }
 

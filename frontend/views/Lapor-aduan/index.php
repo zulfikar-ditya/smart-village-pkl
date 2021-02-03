@@ -46,7 +46,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 </tbody>
             </table>
         </div>
-    
-    
+    <span>
+        <?= \yii\widgets\LinkPager::widget([
+                'pagination' => $pages,
+        ]); ?>
+    </span>
     </div>
 </div>

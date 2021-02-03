@@ -46,10 +46,18 @@ class RequestPembangunanController extends Controller
      */
     public function actionIndex()
     {
-        $data = RequestPembangunan::find()->where(['user_id' => Yii::$app->user->identity->id])->all();
+        $data = RequestPembangunan::find()->where(['user_id' => Yii::$app->user->identity->id]);
+        $pages = new \yii\data\Pagination(
+            [
+                'totalCount' => $data->count(),
+                'pageSize' => 25
+            ]
+        );
+        $models = $data->offset($pages->offset)->limit($pages->limit)->orderBy(['id' => SORT_DESC])->all();
 
         return $this->render('index', [
-            'data' => $data,
+            'data' => $models,
+            'pages' => $pages,
         ]);
     }
 

@@ -48,14 +48,9 @@ AppAsset::register($this);
             'style' => 'background: #3B82F6;',
         ],
     ]);
-    if (\yii\helpers\Url::current() == '/yii/smart_village/frontend/web/index.php?r=site%2Findex') {
-        $menuItems = [
-            ['label' => 'Tentang', 'url' => '#about'],
-            ['label' => 'Pembangunan', 'url' => '#pembangunan'],
-            ['label' => 'Layanan', 'url' => '#layanan'],
-            ['label' => 'Testimoni', 'url' => '#testimoni'],
-            ['label' => 'Products', 'url' => '#product'],
-            ['label' => 'Contact', 'url' => '#contact'],
+    if (!Yii::$app->user->isGuest) {
+        $menuItems[] = [
+            'label' => 'Dashboard', 'url' => ['/site/dashboard'],    
         ];
     }
     if (Yii::$app->user->isGuest) {
@@ -75,7 +70,7 @@ AppAsset::register($this);
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Logout',
                 // ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
