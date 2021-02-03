@@ -1,22 +1,19 @@
 <?php
 
-namespace backend\controllers;
+namespace frontend\controllers;
 
 use Yii;
-use common\models\Penduduk;
-use common\models\Query\PendudukSearch;
-use common\models\Agama;
-use common\models\Pekerjaan;
-use common\models\Pendidikan;
-use common\models\RtRw;
+use common\models\LaporAduan;
+use common\models\Query\LaporAduanSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
- * PendudukController implements the CRUD actions for Penduduk model.
+ * LaporAduanController implements the CRUD actions for LaporAduan model.
  */
-class PendudukController extends Controller
+class LaporAduanController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -44,70 +41,67 @@ class PendudukController extends Controller
     }
 
     /**
-     * Lists all Penduduk models.
+     * Lists all LaporAduan models.
      * @return mixed
      */
     public function actionIndex()
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
-        $searchModel = new PendudukSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        // $searchModel = new LaporAduanSearch();
+        // $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $data = LaporAduan::find()->where(['user_id' => Yii::$app->user->identity->id])->all();
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'data' => $data,
         ]);
     }
 
     /**
-     * Displays a single Penduduk model.
+     * Displays a single LaporAduan model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Penduduk model.
+     * Creates a new LaporAduan model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
-        $model = new Penduduk();
-        $agama = Agama::find()->all();
-        $pekerjaan = Pekerjaan::find()->all();
-        $pendidikan = Pendidikan::find()->all();
-        $RtRw = RtRw::find()->all();
+        $model = new LaporAduan();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('LaporAduan');
+            $model->deskripsi = $request['deskripsi'];
+            $model->pembangunan_id = $request['pembangunan_id'];
+            $model->status = $request['status'];
+            $model->user_id = Yii::$app->user->identity->id;
+
+            $model->foto = UploadedFile::getInstance($model, 'foto');
+            $imageName = time().'.'.$model->foto->getExtension();
+            $imagePath = 'image/aduan/'.$imageName;
+
+            $model->foto->saveAs($imagePath);
+            $model->foto = $imagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
-            'agama' => $agama,
-            'pekerjaan' => $pekerjaan,
-            'pendidikan' => $pendidikan,
-            'RtRw' => $RtRw,
         ]);
     }
 
     /**
-     * Updates an existing Penduduk model.
+     * Updates an existing LaporAduan model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -115,29 +109,32 @@ class PendudukController extends Controller
      */
     public function actionUpdate($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $model = $this->findModel($id);
-        $agama = Agama::find()->all();
-        $pekerjaan = Pekerjaan::find()->all();
-        $pendidikan = Pendidikan::find()->all();
-        $RtRw = RtRw::find()->all();
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+        if (Yii::$app->request->isPost) {
+            $request = Yii::$app->request->post('LaporAduan');
+            $model->deskripsi = $request['deskripsi'];
+            $model->pembangunan_id = $request['pembangunan_id'];
+            $model->status = $request['status'];
+
+            $model->foto = UploadedFile::getInstance($model, 'foto');
+            $imageName = time().'.'.$model->foto->getExtension();
+            $imagePath = 'image/aduan/'.$imageName;
+
+            $model->foto->saveAs($imagePath);
+            $model->foto = $imagePath;
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
-            'agama' => $agama,
-            'pekerjaan' => $pekerjaan,
-            'pendidikan' => $pendidikan,
-            'RtRw' => $RtRw,
         ]);
     }
 
     /**
-     * Deletes an existing Penduduk model.
+     * Deletes an existing LaporAduan model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -145,27 +142,28 @@ class PendudukController extends Controller
      */
     public function actionDelete($id)
     {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Penduduk model based on its primary key value.
+     * Finds the LaporAduan model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Penduduk the loaded model
+     * @return LaporAduan the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Penduduk::findOne($id)) !== null) {
-            return $model;
+        if (($model = LaporAduan::findOne($id)) !== null) {
+            if ($model->user_id == Yii::$app->user->identity->id) {
+                return $model;
+            } else {
+                throw new NotFoundHttpException('This data is not yours');
+            }
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException('The data does not exist.');
     }
 }

@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-login">
     <div class="container">
         <div class="row justify-content-center align-items-center" style="height: 100vh;">
-            <div class="col-md-4 align-self-center shadow" style="padding: 1.5rem;">
+            <div class="col-md-4 align-self-center shadow rounded-1" style="padding: 1.5rem;">
                 <h1 class="text-center" style="letter-spacing: 10px;"><?= Html::encode($this->title) ?></h1>
     
                 <?php $form = ActiveForm::begin(

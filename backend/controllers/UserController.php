@@ -39,18 +39,15 @@ class UserController extends Controller
         ];
     }
 
-    public function beforeAction($action)  {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckAdminOrNot
-        );
-    }
-
     /**
      * Lists all UserAdmin models.
      * @return mixed
      */
     public function actionIndex()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $searchModel = new UserAdminSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -68,6 +65,9 @@ class UserController extends Controller
      */
     public function actionView($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -100,6 +100,9 @@ class UserController extends Controller
      */
     public function actionUpdate($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $model = $this->findModel($id);
 
         if ($model->roles_id == 1) {
@@ -124,6 +127,9 @@ class UserController extends Controller
      */
     public function actionDelete($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

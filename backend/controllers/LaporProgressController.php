@@ -40,18 +40,15 @@ class LaporProgressController extends Controller
         ];
     }
 
-    public function beforeAction($action)  {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
-    }
-
     /**
      * Lists all LaporProgress models.
      * @return mixed
      */
     public function actionIndex()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $searchModel = new LaporProgressSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -69,6 +66,9 @@ class LaporProgressController extends Controller
      */
     public function actionView($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -81,6 +81,9 @@ class LaporProgressController extends Controller
      */
     public function actionCreate()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $model = new LaporProgress();
 
         if (Yii::$app->request->isPost) {
@@ -114,6 +117,9 @@ class LaporProgressController extends Controller
      */
     public function actionUpdate($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $model = $this->findModel($id);
 
         if (Yii::$app->request->isPost) {
@@ -147,6 +153,9 @@ class LaporProgressController extends Controller
      */
     public function actionDelete($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

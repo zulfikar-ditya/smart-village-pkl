@@ -39,18 +39,15 @@ class RequestPembangunanController extends Controller
         ];
     }
 
-    public function beforeAction($action)  {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckOperatorOrNot
-        );
-    }
-
     /**
      * Lists all RequestPembangunan models.
      * @return mixed
      */
     public function actionIndex()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $searchModel = new RequestPembangunanSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -68,6 +65,9 @@ class RequestPembangunanController extends Controller
      */
     public function actionView($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -80,6 +80,9 @@ class RequestPembangunanController extends Controller
      */
     public function actionCreate()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $model = new RequestPembangunan();
         $kategoriPembangunan = \common\models\KategoriPembangunan::find()->all();
 
@@ -109,6 +112,9 @@ class RequestPembangunanController extends Controller
      */
     public function actionUpdate($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $model = $this->findModel($id);
         $kategoriPembangunan = \common\models\KategoriPembangunan::find()->all();
 
@@ -138,6 +144,9 @@ class RequestPembangunanController extends Controller
      */
     public function actionDelete($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckOperatorOrNot
+        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

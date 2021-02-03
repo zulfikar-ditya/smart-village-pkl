@@ -155,6 +155,10 @@ html {
     border-color: white;
 }
 
+.navbar-inverse .navbar-toggle:focus {
+    background: var(--blue);
+}
+
 .navbar-inverse .navbar-brand {
     font-size: 20px;
     letter-spacing: 2px;
@@ -391,6 +395,15 @@ html {
     margin-top: 3rem;
 }
 
+.my-5 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
 .mb-5 {
     margin-bottom: 3rem;
@@ -533,7 +546,10 @@ html {
     }
 
     .site-login .container .row .col-md-4,
-    .site-signup .container .row .col-md-4{
+    .site-signup .container .row .col-md-4,
+    .site-reset-password .container .row .col-md-4,
+    .container .site-resend-verification-email .row .col-md-4,
+    .container .site-request-password-reset .row .col-md-4 {
         width: 50%;
     }
 
@@ -557,7 +573,10 @@ html {
     }
 
     .site-login .container .row .col-md-4,
-    .site-signup .container .row .col-md-4{
+    .site-signup .container .row .col-md-4,
+    .site-reset-password .container .row .col-md-4,
+    .container .site-resend-verification-email .row .col-md-4,
+    .container .site-request-password-reset .row .col-md-4{
         width: 90%;
     }
 
@@ -568,4 +587,12 @@ html {
     .site-error .alert {
         width: 90%;
     }
+}
+
+.bg-cyan {
+    color: white;
+}
+
+.rounded-1 {
+    border-radius: 10px;
 }

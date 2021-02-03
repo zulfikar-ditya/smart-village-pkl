@@ -39,18 +39,15 @@ class PekerjaanController extends Controller
         ];
     }
 
-    public function beforeAction($action)  {
-        Yii::$app->CheckRole->trigger(
-            \common\components\BackendMiddleware::CheckAdminOrNot
-        );
-    }
-
     /**
      * Lists all Pekerjaan models.
      * @return mixed
      */
     public function actionIndex()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $searchModel = new PekerjaanSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -68,6 +65,9 @@ class PekerjaanController extends Controller
      */
     public function actionView($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -80,6 +80,9 @@ class PekerjaanController extends Controller
      */
     public function actionCreate()
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $model = new Pekerjaan();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -100,6 +103,9 @@ class PekerjaanController extends Controller
      */
     public function actionUpdate($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -120,6 +126,9 @@ class PekerjaanController extends Controller
      */
     public function actionDelete($id)
     {
+        Yii::$app->CheckRole->trigger(
+            \common\components\BackendMiddleware::CheckAdminOrNot
+        );
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
