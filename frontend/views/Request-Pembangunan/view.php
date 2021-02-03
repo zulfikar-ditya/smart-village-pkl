@@ -4,16 +4,16 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\LaporAduan */
+/* @var $model common\models\RequestPembangunan */
 
-$this->title = 'Laporan Aduan '.$model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Lapor Aduans', 'url' => ['index']];
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Request Pembangunans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="container">
 
-    <div class="lapor-aduan-view">
+    <div class="request-pembangunan-view">
     
         <h1><?= Html::encode($this->title) ?></h1>
     
@@ -32,14 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'model' => $model,
             'attributes' => [
                 'id',
-                // 'foto',
-                [                   
-                    'label' => 'Foto',
-                    'value' => $model->foto,
-                    'format' => ['image', ['width' =>  '150px', 'height'=> '100px']],
-                ],
+                'judul',
                 'deskripsi:ntext',
-                'pembangunan_id',
+                'kategori_pembangunan_id',
                 'status',
                 'created_at',
                 'updated_at',
