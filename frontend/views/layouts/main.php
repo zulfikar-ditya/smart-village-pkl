@@ -39,55 +39,56 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap" style="padding: 0;">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top text-white shadow',
-            'style' => 'background: #3B82F6;',
-        ],
-    ]);
-    if (!Yii::$app->user->isGuest) {
-        $menuItems[] = [
-            'label' => 'Dashboard', 'url' => ['/site/dashboard'],    
-        ];
-    }
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = [
-            'label' => 'SignUp', 'url' => ['/site/signup'],
+    <header>
+        <?php
+        NavBar::begin([
+            'brandLabel' => Yii::$app->name,
+            'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'bg-green'
-            ]
-        ];
-        $menuItems[] = [
-            'label' => 'SignIn', 'url' => ['/site/login'],
-            'options' => [
-                'class' => 'bg-cyan'
-            ]
-        ];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout',
-                // ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+                'class' => 'navbar-inverse navbar-fixed-top text-white shadow',
+            ],
+        ]);
+        if (!Yii::$app->user->isGuest) {
+            $menuItems[] = [
+                'label' => 'Dashboard', 'url' => ['/site/dashboard'],    
+            ];
+        }
+        if (Yii::$app->user->isGuest) {
+            $menuItems[] = [
+                'label' => 'SignUp', 'url' => ['/site/signup'],
+            ];
+            $menuItems[] = [
+                'label' => 'SignIn', 'url' => ['/site/login'],
+            ];
+        } else {
+            $menuItems[] = '<li>'
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton(
+                    'Logout',
+                    // ['class' => 'btn btn-link logout']
+                )
+                . Html::endForm()
+                . '</li>';
+        }
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'items' => $menuItems,
+        ]);
+        NavBar::end();
+        ?>
+    </header>
     <?= Alert::widget() ?>
     <?= $content ?>
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+
+    window.addEventListener('scroll-nav', function () {
+        var header = document.querySelector('nav');
+        header.classList.toggle('scrool-active', window.scrollY > 0);
+    });
+
 </script>
 <?php $this->endBody() ?>
 </body>

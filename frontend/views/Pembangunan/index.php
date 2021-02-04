@@ -25,9 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php foreach ($data as $item) { ?>
                         <tr>
                             <th>
-                                <a href="<?= \yii\helpers\Url::to('index.php?r=pembangunan%2Fview&id='.$item['id']) ?>">
-                                    <?= $item['id'] ?>
-                                </a>
+                                <?= Html::a($item['id'], ['pembangunan/view', 'id' => $item['id']]) ?>
                             </th>
                             <td><?= $item['nama_pembangunan'] ?></td>
                             <td><?= $item['anggaran'] ?></td>
