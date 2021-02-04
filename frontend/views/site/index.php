@@ -17,8 +17,8 @@ use yii\helpers\Html;
                         <?php if(!Yii::$app->user->isGuest) { ?>
                         <?= Html::a('Dashboard', ['site/dashboard'], ['class' => 'btn mt-5']) ?>
                         <?php } else { ?>
-                        <?= Html::a('Sing In', ['site/login'], ['class' => 'btn mt-5']) ?>
-                        <?= Html::a('Sing Up', ['site/signup'], ['class' => 'btn sign-up mt-5']) ?>
+                        <?= Html::a('Sign In', ['site/login'], ['class' => 'btn mt-5']) ?>
+                        <?= Html::a('Sign Up', ['site/signup'], ['class' => 'btn sign-up mt-5']) ?>
                         <?php } ?>
                     </div>
                 </div>
@@ -232,8 +232,13 @@ use yii\helpers\Html;
                         <div class="content">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24"><path d="M12 0c-5.083 0-8.465 4.949-3.733 13.678 1.596 2.945-1.725 3.641-5.09 4.418-3.073.709-3.187 2.235-3.177 4.904l.004 1h23.99l.004-.969c.012-2.688-.093-4.223-3.177-4.935-3.438-.794-6.639-1.49-5.09-4.418 4.719-8.912 1.251-13.678-3.731-13.678m0 1c1.89 0 3.39.764 4.225 2.15 1.354 2.251.866 5.824-1.377 10.06-.577 1.092-.673 2.078-.283 2.932.937 2.049 4.758 2.632 6.032 2.928 2.303.534 2.412 1.313 2.401 3.93h-21.998c-.01-2.615.09-3.396 2.401-3.93 1.157-.266 5.138-.919 6.049-2.94.387-.858.284-1.843-.304-2.929-2.231-4.115-2.744-7.764-1.405-10.012.84-1.412 2.353-2.189 4.259-2.189"/></svg>
                             <h2>Mike</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.</p>
+                            <p>
+                                <span>"</span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.
+                                <span>"</span>
+                            </p>
                         </div>
+                        <div class="green"></div>
                     </div>
                 </div>
                 <div class="col-md-3 m-3 align-self-center shadow p-3" data-aos="zoom-in">
@@ -242,8 +247,13 @@ use yii\helpers\Html;
                         <div class="content">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.995 24h-1.995c0-3.104.119-3.55-1.761-3.986-2.877-.664-5.594-1.291-6.584-3.458-.361-.791-.601-2.095.31-3.814 2.042-3.857 2.554-7.165 1.403-9.076-1.341-2.229-5.413-2.241-6.766.034-1.154 1.937-.635 5.227 1.424 9.025.93 1.712.697 3.02.338 3.815-.982 2.178-3.675 2.799-6.525 3.456-1.964.454-1.839.87-1.839 4.004h-1.995l-.005-1.241c0-2.52.199-3.975 3.178-4.663 3.365-.777 6.688-1.473 5.09-4.418-4.733-8.729-1.35-13.678 3.732-13.678 4.983 0 8.451 4.766 3.732 13.678-1.551 2.928 1.65 3.624 5.09 4.418 2.979.688 3.178 2.143 3.178 4.663l-.005 1.241zm-13.478-6l.91 2h1.164l.92-2h-2.994zm2.995 6l-.704-3h-1.615l-.704 3h3.023z"/></svg>
                             <h2>John</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.</p>
+                            <p>
+                                <span>"</span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.
+                                <span>"</span>
+                            </p>
                         </div>
+                        <div class="green"></div>
                     </div>
                 </div>
                 <div class="col-md-3 m-3 align-self-center shadow p-3" data-aos="zoom-in">
@@ -252,8 +262,13 @@ use yii\helpers\Html;
                         <div class="content">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.823 19.307c-2.967-.681-6.578-2.437-5.514-4.723.684 1.125 2.8 1.777 4.449.804-4.747-1.204 2.334-9.471-3.871-14.105-1.134-.853-2.526-1.283-3.911-1.283-1.379 0-2.752.425-3.863 1.283-6.206 4.634.876 12.901-3.872 14.105 1.652.974 3.771.292 4.451-.804 1.064 2.287-2.551 4.043-5.514 4.723-2.979.683-3.178 2.468-3.178 4.004l.005.689h1.996c0-1.96-.032-2.364 1.625-2.744 1.633-.375 5.568-1.53 6.855-4.162 1.011-2.067-.02-3.45-1.528-6.722-.133 1.109-1.001 1.613-1.001 1.613-.049-.692-.15-1.366-.241-1.967-.486-3.225-.638-5.463 1.623-7.152 1.498-1.156 3.787-1.159 5.357.019 2.236 1.67 2.084 3.909 1.598 7.133-.089.591-.188 1.253-.238 1.933 0 0-.831-.404-.975-1.604-1.535 3.296-2.573 4.669-1.556 6.747 1.286 2.632 5.223 3.788 6.855 4.162 1.67.384 1.625.8 1.625 2.744h1.994l.005-.693c.001-1.536-.199-3.318-3.176-4z"/></svg>
                             <h2>Sarah</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.</p>
+                            <p>
+                                <span>"</span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis inventore nam vitae sint asperiores quas nulla sit expedita error. Fugiat fugit neque sint mollitia laborum? Porro quidem saepe veniam.
+                                <span>"</span>
+                            </p>
                         </div>
+                        <div class="green"></div>
                     </div>
                 </div>
             </div>
