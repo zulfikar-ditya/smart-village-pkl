@@ -15,6 +15,16 @@ use Yii;
 class SumberDanaPembangunan extends \yii\db\ActiveRecord
 {
     /**
+     * add TimestampBehavior
+     */
+    public function behaviors()
+    {
+        return [
+            \yii\behaviors\TimestampBehavior::className()
+        ];
+    }
+    
+    /**
      * {@inheritdoc}
      */
     public static function tableName()

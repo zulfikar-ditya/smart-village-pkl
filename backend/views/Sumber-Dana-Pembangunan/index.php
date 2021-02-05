@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\Query\SumberDanaPembangunanSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sumber Dana Pembangunans';
+$this->title = 'Sumber Dana Pembangunan';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sumber-dana-pembangunan-index">

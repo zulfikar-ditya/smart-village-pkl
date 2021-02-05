@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\Query\DusunSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Dusuns';
+$this->title = 'Dusun';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="dusun-index">

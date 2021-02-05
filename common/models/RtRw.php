@@ -47,4 +47,13 @@ class RtRw extends \yii\db\ActiveRecord
             'dusun_id' => 'Dusun ID',
         ];
     }
+
+    /**
+     * get dusun
+     */
+    public function getDusun()
+    {
+        return $this->hasOne(Dusun::className(), ['id' => 'id']);
+    }
+    
 }

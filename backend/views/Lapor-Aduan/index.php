@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\Query\LaporAduanSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Lapor Aduans';
+$this->title = 'Lapor Aduan';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="lapor-aduan-index">

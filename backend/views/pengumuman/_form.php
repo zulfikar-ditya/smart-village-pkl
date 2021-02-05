@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'isi')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'tgl_pengumuman')->textInput() ?>
+    <?= $form->field($model, 'tgl_pengumuman')->textInput(['type' => 'date']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

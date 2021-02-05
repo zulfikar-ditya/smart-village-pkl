@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\Query\LaporProgressSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Lapor Progresses';
+$this->title = 'Lapor Progresse';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="lapor-progress-index">

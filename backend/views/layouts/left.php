@@ -59,6 +59,7 @@
 
                     ['label' => 'Lapor Aduan', 'icon' => 'far fa-flag', 'url' => ['/lapor-aduan']],
                     ['label' => 'pengumuman', 'icon' => 'far fa-envelope', 'url' => ['/pengumuman']],
+                    ['label' => 'Logout', 'icon' => 'fas fa-sign-out-alt', 'url' => ['/site/logout'], 'template'=>'<a href="{url}" data-method="post">{icon}{label}</a>'],
                 ],
             ]
         ) ?>
@@ -86,6 +87,7 @@
                     ['label' => 'penduduk', 'icon' => 'fas fa-user', 'url' => ['/penduduk']],
                     ['label' => 'Lapor Aduan', 'icon' => 'far fa-flag', 'url' => ['/lapor-aduan']],
                     ['label' => 'report', 'icon' => 'fas fa-tasks', 'url' => ['/lapor-progress']],
+                    ['label' => 'Logout', 'icon' => 'fas fa-sign-out-alt', 'url' => ['/site/logout'], 'template'=>'<a href="{url}" data-method="post">{icon}{label}</a>'],
                     
                 ],
             ]
@@ -99,6 +101,7 @@
                             ],
                 'items' => [
                     ['label' => 'Access Denied', 'icon' => 'fas fa-user-times', 'url' => ['/']],
+                    ['label' => 'Logout', 'icon' => 'fas fa-sign-out-alt', 'url' => ['/site/logout'], 'template'=>'<a href="{url}" data-method="post">{icon}{label}</a>'],
                 ]
             ]
             ) ?>

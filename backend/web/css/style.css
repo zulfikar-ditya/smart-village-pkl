@@ -121,7 +121,6 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
 }
 
 .flex-column {
@@ -356,3 +355,27 @@
     z-index: 99;
 }
 
+.site-index .row .col-md-3 .row .col-md-5 {
+    text-align: center;
+}
+
+
+@media (max-width: 992px) {
+    .site-index .row .col-md-3 {
+        width: 50%;
+    }
+
+    .site-index .row .col-md-3 .row .col-md-5{
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-index .row .col-md-3 {
+        width: 70%;
+    }
+
+    .site-index .row .col-md-3 .row .col-md-5{
+        width: 50%;
+    }
+}

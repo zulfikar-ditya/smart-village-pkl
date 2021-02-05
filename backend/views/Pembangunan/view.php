@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Pembangunan */
 
-$this->title = $model->id;
+$this->title = 'Pembangunan '.$model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Pembangunans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -43,11 +43,37 @@ $this->params['breadcrumbs'][] = $this->title;
             'latitude',
             'keterangan',
             'prosentase',
-            'sumber_dana_pembangunan_id',
-            'kategori_pembangunan_id',
-            'status_pembangunan_id',
-            'user_id',
-            'mitra_id',
+            [
+                'attribute' => 'Sumber Dana Pembangunan',
+                'value' => function ($model) {
+                    return Html::encode($model->getSumberDanaPembangunan()->all()[0]['nama']);
+                }
+            ],
+            [
+                'attribute' => 'Kategori Pembangunan',
+                'value' => function ($model) {
+                    return Html::encode($model->getkategoriPembangunan()->all()['0']['nama']);
+                }
+            ],
+            [
+                'attribute' => 'Status Pembangunan',
+                'value' => function ($model) {
+                    return Html::encode($model->getStatusPembangunan()->all()[0]['nama']);
+                }
+            ],
+            [
+                'attribute' => 'User',
+                'value' => function ($model) {
+                    return Html::encode($model->getUser()->all()[0]['username']);
+                }
+            ],
+            [
+                'attribute' => 'mitra',
+                'value' => function ($model) {
+                    return Html::encode($model->getMitra()->all()[0]['nama_mitra']);
+                }
+            ],
+
             'created_at',
             'updated_at',
         ],

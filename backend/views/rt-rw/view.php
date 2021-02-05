@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\RtRw */
 
-$this->title = $model->id;
+$this->title = 'Rt Rw '.$model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Rt Rws', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -32,7 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'rw_parent',
             'rt_child',
-            'dusun_id',
+            // 'dusun_id',
+            [
+                'attribute' => 'Dusun',
+                'value' => function ($model) {
+                    return Html::encode($model->getDusun()->all()[0]['nama_dusun']);
+                }
+            ],
         ],
     ]) ?>
 

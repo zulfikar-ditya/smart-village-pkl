@@ -54,4 +54,11 @@ class Mitra extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
         ];
     }
+
+    /**
+     * get user id
+     */
+    public function getUser() {
+        return $this->hasOne(User::className(), ['id' => 'id']);
+    }
 }

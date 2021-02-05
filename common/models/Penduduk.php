@@ -24,6 +24,16 @@ use Yii;
 class Penduduk extends \yii\db\ActiveRecord
 {
     /**
+     * add TimestampBehavior
+     */
+    public function behaviors()
+    {
+        return [
+            \yii\behaviors\TimestampBehavior::className()
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public static function tableName()
@@ -73,5 +83,37 @@ class Penduduk extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    /**
+     * get agama
+     */
+    public function getAgama() 
+    {
+        return $this->hasOne(Agama::className(), ['id' => 'id']);
+    }
+
+    /**
+     * get peketrjaan
+     */
+    public function getPekerjaan() 
+    {
+        return $this->hasOne(Pekerjaan::className(), ['id' => 'id']);
+    }
+
+    /**
+     *  get pendidikan
+     */
+    public function getPendidikan()
+    {
+        return $this->hasOne(Pendidikan::className(), ['id' => 'id']);
+    }
+
+    /**
+     * get rt rw
+     */
+    public function getRtRw()
+    {
+        return $this->hasOne(RtRw::className(), ['id' => 'id']);
     }
 }

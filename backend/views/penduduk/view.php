@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Penduduk */
 
-$this->title = $model->id;
+$this->title = 'Penduduk'.$model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Penduduks', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -35,11 +35,34 @@ $this->params['breadcrumbs'][] = $this->title;
             'tempat_lahir',
             'tanggal_lahir',
             'jenis_kelamin',
-            'agama_id',
+            [
+                'attribute' => 'Agama',
+                'value' => function ($model) {
+                    return Html::encode($model->getAgama()->all()[0]['nama']);
+                }
+            ],
             'status_perkawinan',
-            'pekerjaan_id',
-            'pendidikan_id',
-            'rt_rw_id',
+            [
+                'attribute' => 'Pekerjaan',
+                'value' => function ($model) {
+                    return Html::encode($model->getPekerjaan()->all()[0]['nama']);
+                }
+            ],
+            [
+                'attribute' => 'Pendikan',
+                'value' => function ($model) {
+                    return Html::encode($model->getPendidikan()->all()[0]['nama']);
+                }
+            ],
+            [
+                'attribute' => 'Rt/Rw',
+                'value' => function ($model) {
+                    return Html::encode(
+                        $model->getRtRw()->all()[0]['rw_parent'].'/'
+                        .Html::encode($model->getRtRw()->all()[0]['rt_child'])
+                    );
+                }
+            ],
             'created_at',
             'updated_at',
         ],

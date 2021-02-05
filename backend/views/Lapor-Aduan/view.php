@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\LaporAduan */
 
-$this->title = $model->id;
+$this->title = 'Lapor Aduan '.$model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Lapor Aduans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -37,7 +37,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['image', ['width' =>  '150px', 'height'=> '100px']],
             ],
             'deskripsi:ntext',
+            // [ idk now why doesnt work
+            //     'attribute' => 'user',
+            //     'value' => function ($model) {
+            //         return var_dump($model->getUser()->all());
+            //         // return Html::encode($model->getUser()->all()[0]['username']);
+            //     }
+            // ],
             'user_id',
+            // [
+            //     'attribute' => 'user',
+            //     'value' => function ($model) {
+            //         return Html::encode($model->getPembangunan()->all()[0]['nama_pembangunan']);
+            //     }
+            // ],
             'pembangunan_id',
             'status',
             'created_at',

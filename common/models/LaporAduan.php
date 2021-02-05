@@ -19,6 +19,16 @@ use Yii;
 class LaporAduan extends \yii\db\ActiveRecord
 {
     /**
+     * add TimestampBehavior
+     */
+    public function behaviors()
+    {
+        return [
+            \yii\behaviors\TimestampBehavior::className()
+        ];
+    }
+    
+    /**
      * {@inheritdoc}
      */
     public static function tableName()
@@ -57,5 +67,13 @@ class LaporAduan extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+    public function getUser()
+    {
+        return $this->hasOne(UserAdmin::className(), ['id' => 'id']);
+    }
+    public function getPembangunan()
+    {
+        return $this->hasOne(Pembangunan::className(), ['id' => 'id']);
     }
 }

@@ -16,22 +16,54 @@ $this->title = 'Dashboard';
                 <h4><i class="fas fa-user"></i> <?= Yii::$app->user->identity->username ?></h4>
             </div>
             <div class="card p-5 bg-white shadow">
-                <table>
-                    <thead>
-                        <th style="width: 50%"></th>
-                        <th style="width: 50%"></th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nik</td>
-                            <td>:  01298347</td>
-                        </tr>
-                        <tr>
-                            <td>Lahir</td>
-                            <td>:  Sidoarjo, 18 June 1998</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <?php if ($penduduk == null) { ?>
+                    <p>Anda tidak termasuk penduduk</p>
+                <?php } else { ?>
+                    <table class="text-capitalize">
+                        <thead>
+                            <th style="width: 50%"></th>
+                            <th style="width: 50%"></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nama Lengkap</td>
+                                <td>:  <?= $penduduk->nama_lengkap ?></td>
+                            </tr>
+                            <tr>
+                                <td>TTL</td>
+                                <td>:  <?= $penduduk->tempat_lahir.', '.$penduduk->tanggal_lahir ?></td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <?php if($penduduk->jenis_kelamin == 'L') { ?>
+                                <td>:  Laki-Laki</td>
+                                <?php } else { ?>
+                                <td>:  Perempuan</td>
+                                <?php } ?>
+                            </tr>
+                            <tr>
+                                <td>Agama</td>
+                                <td>:  <?= $penduduk->getAgama()->all()[0]['nama']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Status perkawinan</td>
+                                <td>:  <?= $penduduk->status_perkawinan ?></td>
+                            </tr>
+                            <tr>
+                                <td>Pekerjaan</td>
+                                <td>:  <?= $penduduk->getPekerjaan()->all()[0]['nama']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Pendidikan</td>
+                                <td>:  <?= $penduduk->getPendidikan()->all()[0]['nama']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>RtRw</td>
+                                <td>:  <?= $penduduk->getRtRw()->all()[0]['rw_parent'].'/'.$penduduk->getRtRw()->all()[0]['rt_child']; ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <?php }?>
             </div>
         </div>
 
@@ -76,6 +108,29 @@ $this->title = 'Dashboard';
 
             </div>
         </div>
-        
+        <h3 class="text-center my-5">Pengumuman</h3>
+        <table class="table p-5 shadow" style="padding: 3rem;">
+            <thead class="text-uppercase">
+                <th>id</th>
+                <th>Isi</th>
+                <th>perihal</th>
+                <th>tanggal pengumuman</th>
+            </thead>
+            <tbody class="text-capitalize">
+                <?php if (count($pengumuman) == 0) { ?>
+                    <tr>
+                        <td><h1>None</h1></td>
+                    </tr>
+                <?php } ?>
+                <?php foreach ($pengumuman as $item) { ?>
+                    <tr>
+                        <th><?= $item['id'] ?></th>
+                        <td><?= $item['isi'] ?></td>
+                        <td><?= $item['perihal'] ?></td>
+                        <td><?= $item['tgl_pengumuman'] ?></td>
+                    </tr>
+                <?php }?>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -199,4 +199,20 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    /**
+     * get roles id
+     */
+    public function getRoles()
+    {
+        return $this->hasOne(Roles::className(), ['roles_id' => 'id']);
+    }
+
+    /**
+     * get penduduk
+     */
+    public function getPenduduk()
+    {
+        return $this->hasOne(Penduduk::className(), ['penduduk_id' => 'id']);
+    }
 }

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\Query\MitraSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Mitras';
+$this->title = 'Mitra';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mitra-index">

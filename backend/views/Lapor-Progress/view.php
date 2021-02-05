@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\LaporProgress */
 
-$this->title = $model->id;
+$this->title = 'Lapor Progresse '.$model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Lapor Progresses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -38,7 +38,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'tanggal',
             'capaian_progress',
             'uraian_pekerjaan:ntext',
-            'pembangunan_id',
+            [
+                'attribute' => 'Pembangunan Id',
+                'value' => function ($model) {
+                    return Html::encode($model->getPembangunan()->all()[0]['nama_pembangunan']);
+                },
+            ],
         ],
     ]) ?>
 

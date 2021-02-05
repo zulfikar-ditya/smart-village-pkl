@@ -54,4 +54,11 @@ class LaporProgress extends \yii\db\ActiveRecord
             'pembangunan_id' => 'Pembangunan ID',
         ];
     }
+
+    /**
+     * get pembangunan id
+     */
+    public function getPembangunan() {
+        return $this->hasOne(Pembangunan::className(), ['id' => 'id']);
+    }
 }

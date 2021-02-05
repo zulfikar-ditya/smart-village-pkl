@@ -28,12 +28,12 @@ use yii\helpers\Url;
                         <i class="fas fa-users fa-3x"></i>
                     </div>
                     
-                    <a href="<?= Url::to(['/user'])?>">
-                        <div class="col-md-7" style="color: black;">
+                    <div class="col-md-7" style="color: black;">
+                        <a href="<?= Url::to(['/user'])?>">
                             <h2>User</h2>
                             <h5><?= $user ?></h5>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
             
@@ -43,12 +43,12 @@ use yii\helpers\Url;
                         <i class="fas fa-street-view fa-3x"></i>
                     </div>
                     
-                    <a href="<?= Url::to(['/rt-rw'])?>">
-                        <div class="col-md-7" style="color: black;">
+                    <div class="col-md-7" style="color: black;">
+                        <a href="<?= Url::to(['/rt-rw'])?>">
                             <h2>Rt/Rw</h2>
                             <h5><?= $RtRw ?></h5>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
     
@@ -58,12 +58,12 @@ use yii\helpers\Url;
                         <i class="fas fa-map-marker-alt fa-3x"></i>
                     </div>
     
-                    <a href="<?= Url::to(['/dusun'])?>">
-                        <div class="col-md-7" style="color: black;">
+                    <div class="col-md-7" style="color: black;">
+                        <a href="<?= Url::to(['/dusun'])?>">
                             <h2>Dusun</h2>
                             <h5><?= $dusun ?></h5>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
     

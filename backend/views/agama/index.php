@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\Query\AgamaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Agamas';
+$this->title = 'Agama';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="agama-index">

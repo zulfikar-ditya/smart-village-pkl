@@ -34,6 +34,16 @@ use Yii;
 class UserAdmin extends \yii\db\ActiveRecord
 {
     /**
+     * timsstamp
+     */
+    public function behaviors()
+    {
+        return [
+            \yii\behaviors\TimestampBehavior::className()
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public static function tableName()

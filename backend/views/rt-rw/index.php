@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\Query\RtRwSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Rt Rws';
+$this->title = 'Rt Rw';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="rt-rw-index">
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'rw_parent',
             'rt_child',
-            'dusun_id',
+            // 'dusun_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

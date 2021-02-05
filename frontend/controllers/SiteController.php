@@ -14,6 +14,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use common\models\Penduduk;
+use common\models\Pengumuman;
 
 /**
  * Site controller
@@ -79,7 +81,22 @@ class SiteController extends Controller
 
     public function actionDashboard()
     {
-        return $this->render('dashboard');
+        $penduduk = null;
+        try {
+            $penduduk = Penduduk::findOne(Yii::$app->user->identity->penduduk_id);
+        } catch (InvalidArgumentException){
+            $penduduk = null;
+        }
+        $dataPengumuman = Pengumuman::find();
+        $pages = new \yii\data\Pagination([
+                    'totalCount' => $dataPengumuman->count(),
+                    'pageSize' => 3
+                ]);
+        $models = $dataPengumuman->offset($pages->offset)->limit($pages->limit)->orderBy(['id' => SORT_DESC])->all();
+        return $this->render('dashboard', [
+            'penduduk' => $penduduk,
+            'pengumuman' => $models,
+        ]);
     }
 
     /**

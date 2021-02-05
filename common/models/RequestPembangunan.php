@@ -19,6 +19,16 @@ use Yii;
 class RequestPembangunan extends \yii\db\ActiveRecord
 {
     /**
+     * add TimestampBehavior
+     */
+    public function behaviors()
+    {
+        return [
+            \yii\behaviors\TimestampBehavior::className()
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public static function tableName()
@@ -57,5 +67,21 @@ class RequestPembangunan extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    /**
+     * get user
+     */
+    public function getUser()
+    {
+        return $this->hasOne(UserAdmin::className(), ['id' => 'id']);
+    }
+
+    /**
+     * get kategori pembangunan
+     */
+    public function getKategoriPembangunan()
+    {
+        return $this->hasOne(KategoriPembangunan::className(), ['id' => 'id']);
     }
 }

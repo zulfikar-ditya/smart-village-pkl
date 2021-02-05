@@ -28,6 +28,16 @@ use Yii;
 class Pembangunan extends \yii\db\ActiveRecord
 {
     /**
+     * add TimestampBehavior
+     */
+    public function behaviors()
+    {
+        return [
+            \yii\behaviors\TimestampBehavior::className()
+        ];
+    }
+    
+    /**
      * {@inheritdoc}
      */
     public static function tableName()
@@ -82,5 +92,44 @@ class Pembangunan extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+    /**
+     * get sumber dana pembangunan
+     */
+    public function getSumberDanaPembangunan()
+    {
+        return $this->hasOne(SumberDanaPembangunan::className(), ['id' => 'id']);
+    }
+
+    /**
+     * get kategori_pembangunan_id
+     */
+    public function getKategoriPembangunan()
+    {
+        return $this->hasOne(KategoriPembangunan::className(), ['id' => 'id']);
+    }
+
+    /**
+     * get status_pembangunan_id
+     */
+    public function getStatusPembangunan()
+    {
+        return $this->hasOne(StatusPembangunan::className(), ['id' => 'id']);
+    }
+
+    /**
+     * get user
+     */
+    public function getUser()
+    {
+        return $this->hasOne(UserAdmin::className(), ['id' => 'id']);
+    }
+
+    /**
+     * get mitra
+     */
+    public function getMitra()
+    {
+        return $this->hasOne(Mitra::className(), ['id' => 'id']);
     }
 }
