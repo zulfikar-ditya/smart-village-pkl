@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
                 </select>
             </div>
         
-            <?= $form->field($model, 'status')->dropDownList([ 'terverifikasi' => 'Terverifikasi', 'ditindaklanjuti' => 'Ditindaklanjuti', 'requestbaru' => 'Requestbaru', '' => '', ], ['prompt' => '']) ?>
+            <!-- <?= $form->field($model, 'status')->dropDownList([ 'terverifikasi' => 'Terverifikasi', 'ditindaklanjuti' => 'Ditindaklanjuti', 'requestbaru' => 'Requestbaru', '' => '', ], ['prompt' => '']) ?> -->
         
             <div class="row justify-content-center">
                 <?= Html::submitButton('Save', ['class' => 'btn bg-cyan']) ?>

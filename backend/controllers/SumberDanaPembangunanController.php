@@ -20,6 +20,7 @@ class SumberDanaPembangunanController extends Controller
     public function behaviors()
     {
         return [
+            \yii\behaviors\TimestampBehavior::className(),
             'access' => [
                 'class' => \yii\filters\AccessControl::className(),
                 'rules' => [

@@ -35,34 +35,38 @@ $this->params['breadcrumbs'][] = $this->title;
             'tempat_lahir',
             'tanggal_lahir',
             'jenis_kelamin',
-            [
-                'attribute' => 'Agama',
-                'value' => function ($model) {
-                    return Html::encode($model->getAgama()->all()[0]['nama']);
-                }
-            ],
+            'agama_id',
+            // [
+            //     'attribute' => 'Agama',
+            //     'value' => function ($model) {
+            //         return Html::encode($model->getAgama()->all()[0]['nama']);
+            //     }
+            // ],
             'status_perkawinan',
-            [
-                'attribute' => 'Pekerjaan',
-                'value' => function ($model) {
-                    return Html::encode($model->getPekerjaan()->all()[0]['nama']);
-                }
-            ],
-            [
-                'attribute' => 'Pendikan',
-                'value' => function ($model) {
-                    return Html::encode($model->getPendidikan()->all()[0]['nama']);
-                }
-            ],
-            [
-                'attribute' => 'Rt/Rw',
-                'value' => function ($model) {
-                    return Html::encode(
-                        $model->getRtRw()->all()[0]['rw_parent'].'/'
-                        .Html::encode($model->getRtRw()->all()[0]['rt_child'])
-                    );
-                }
-            ],
+            'pekerjaan_id',
+            'pendidikan_id',
+            'rt_rw_id',
+            // [
+            //     'attribute' => 'Pekerjaan',
+            //     'value' => function ($model) {
+            //         return Html::encode($model->getPekerjaan()->all()[0]['nama']);
+            //     }
+            // ],
+            // [
+            //     'attribute' => 'Pendikan',
+            //     'value' => function ($model) {
+            //         return Html::encode($model->getPendidikan()->all()[0]['nama']);
+            //     }
+            // ],
+            // [
+            //     'attribute' => 'Rt/Rw',
+            //     'value' => function ($model) {
+            //         return Html::encode(
+            //             $model->getRtRw()->all()[0]['rw_parent'].'/'
+            //             .Html::encode($model->getRtRw()->all()[0]['rt_child'])
+            //         );
+            //     }
+            // ],
             'created_at',
             'updated_at',
         ],

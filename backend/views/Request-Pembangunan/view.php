@@ -40,12 +40,13 @@ $this->params['breadcrumbs'][] = $this->title;
             //     }
             // ],
             'user_id',
-            [
-                'attribute' => 'kategori pembangunan',
-                'value' => function($model) {
-                    return Html::encode($model->getKategoriPembangunan()->all()[0]['nama']);
-                }
-            ],
+            'kategori_pembangunan_id',
+            // [
+            //     'attribute' => 'kategori pembangunan',
+            //     'value' => function($model) {
+            //         return Html::encode($model->getKategoriPembangunan()->all()[0]['nama']);
+            //     }
+            // ],
             'status',
             'created_at',
             'updated_at',

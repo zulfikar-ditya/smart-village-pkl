@@ -21,6 +21,7 @@ class RequestPembangunanController extends Controller
     public function behaviors()
     {
         return [
+            \yii\behaviors\TimestampBehavior::className(),
             'access' => [
                 'class' => \yii\filters\AccessControl::className(),
                 'rules' => [
@@ -88,9 +89,18 @@ class RequestPembangunanController extends Controller
             $request = Yii::$app->request->post('RequestPembangunan');
             $model->judul = $request['judul'];
             $model->deskripsi = $request['deskripsi'];
-            $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
-            $model->status = $request['status'];
+            try {
+                $kategori = \common\models\KategoriPembangunan::findOne($request['kategori_pembangunan_id']);
+                $model->kategori_pembangunan_id = $kategori->id;
+            } catch (\Exception $e) {
+                $model->kategori_pembangunan_id = 1;
+            }
+            $model->status = 'requestbaru';
             $model->user_id = Yii::$app->user->identity->id;
+            // echo '<pre>';
+            // var_dump($model);
+            // echo '</pre>';
+            // die();
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -120,7 +130,7 @@ class RequestPembangunanController extends Controller
             $model->judul = $request['judul'];
             $model->deskripsi = $request['deskripsi'];
             $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
-            $model->status = $request['status'];
+            $model->status = 'requestbaru';
             $model->user_id = Yii::$app->user->identity->id;
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);

@@ -32,13 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'rw_parent',
             'rt_child',
-            // 'dusun_id',
-            [
-                'attribute' => 'Dusun',
-                'value' => function ($model) {
-                    return Html::encode($model->getDusun()->all()[0]['nama_dusun']);
-                }
-            ],
+            'dusun_id',
+            // [
+            //     'attribute' => 'Dusun',
+            //     'value' => function ($model) {
+            //         return Html::encode($model->getDusun()->all()[0]['nama_dusun']);
+            //     }
+            // ],
         ],
     ]) ?>
 

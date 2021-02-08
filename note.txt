@@ -1,0 +1,2 @@
+i dont now why when i view with FOREIGNKEY from sql file that works
+but when i create from controller that wont displayed, so i delete all the display relation data
