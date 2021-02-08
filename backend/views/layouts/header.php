@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $content string */
 ?>
 
-<header class="main-header">
+<header class="main-header" style="position: fixed; width: 100%;;">
 
     <?= Html::a('<span class="logo-mini"><i class="fas fa-home"></i></span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 

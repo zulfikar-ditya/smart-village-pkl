@@ -361,12 +361,19 @@
 
 
 @media (max-width: 992px) {
+    .site-index .row#row {
+        margin-top: 100px;
+    }
     .site-index .row .col-md-3 {
         width: 50%;
     }
-
     .site-index .row .col-md-3 .row .col-md-5{
         width: 40%;
+    }
+
+    .site-login .row .col-md-5 {
+        width: 50%;
+
     }
 }
 
@@ -377,5 +384,10 @@
 
     .site-index .row .col-md-3 .row .col-md-5{
         width: 50%;
+    }
+
+    .site-login .row .col-md-5 {
+        width: 80%;
+
     }
 }

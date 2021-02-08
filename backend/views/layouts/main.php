@@ -40,6 +40,13 @@ if (Yii::$app->controller->action->id === 'login') {
             body {
                 font-family: 'Oxygen', sans-serif;
             }
+
+            .sidebar-menu > li > a {
+                width: 100%;
+                padding: 12px 30px 12px 15px;
+                display: block;
+            }
+
         </style>
         
         <link rel="stylesheet" href="style.css">
@@ -59,7 +66,7 @@ if (Yii::$app->controller->action->id === 'login') {
             ['directoryAsset' => $directoryAsset]
         )
         ?>
-        <div class="">
+        <div class="mt-5">
             <?= $this->render(
                 'content.php',
                 ['content' => $content, 'directoryAsset' => $directoryAsset]

@@ -22,11 +22,7 @@ AppAsset::register($this);
 <body class="blank" style="background-image: url('../../backend/web/image/random/pexels-skitterphoto-654.jpg'); background-position: center; background-size: cover;">
 <?php $this->beginBody() ?>
 
-<div class="container">
-    <div class="wrap">
-        <?= $content ?>
-    </div>
-</div>
+    <?= $content ?>
 
 <?php $this->endBody() ?>
 </body>

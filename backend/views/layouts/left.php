@@ -7,6 +7,7 @@
                 'options' => [
                             'class' => 'sidebar-menu tree text-capitalize', 
                             'data-widget'=> 'tree',
+                            'style' => 'position: fixed;',
                             ],
                 'items' => [
                     ['label' => 'Dashboard', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/']],
@@ -69,6 +70,7 @@
                 'options' => [
                             'class' => 'sidebar-menu tree text-capitalize', 
                             'data-widget'=> 'tree',
+                            'style' => 'position: fixed;',
                             ],
                 'items' => [
                     ['label' => 'Dashboard', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/']],

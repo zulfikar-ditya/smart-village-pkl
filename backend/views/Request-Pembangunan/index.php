@@ -28,10 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'judul',
-            'deskripsi:ntext',
+            // 'deskripsi:ntext',
             // 'user_id',
             // 'kategori_pembangunan_id',
-            //'status',
+            'status',
             //'created_at',
             //'updated_at',
 

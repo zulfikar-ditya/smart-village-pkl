@@ -73,17 +73,37 @@ class SiteController extends Controller
         $user = User::find()->count();
         $RtRw = RtRw::find()->count();
         $dusun = Dusun::find()->count();
+
         $pembangunan = Pembangunan::find();
         $pages = new \yii\data\Pagination([
             'totalCount' => $pembangunan->count(),
             'pageSize' => 4
         ]);
         $dataPembangunan = $pembangunan->offset($pages->offset)->limit($pages->limit)->orderBy(['id' => SORT_DESC])->all();
+
+        $laporAduan = LaporAduan::find();
+        $pages = new \yii\data\Pagination([
+            'totalCount' => $laporAduan->count(),
+            'pageSize' => 4
+        ]);
+        $dataLaporAduan = $laporAduan->offset($pages->offset)->limit($pages->limit)->orderBy(['id' => SORT_DESC])->where(['status' => 'laporanbaru'])->all();
+
+        $requestPembangunan = RequestPembangunan::find();
+        $pages = new \yii\data\Pagination([
+            'totalCount' => $requestPembangunan->count(),
+            'pageSize' => 4
+        ]);
+        $dataRequestPembangunan = $requestPembangunan->offset($pages->offset)->limit($pages->limit)->orderBy(['id' => SORT_DESC])->where(['status' => 'requestbaru'])->all();
+
         return $this->render('index', [
             'user' => $user,
             'RtRw' => $RtRw,
             'dusun' => $dusun,
+
             'dataPembangunan' => $dataPembangunan,
+            'dataLaporAduan' => $dataLaporAduan,
+            'dataRequestPembangunan' => $dataRequestPembangunan,
+
             'penduduk' => Penduduk::find()->count(),
             'laporAduan' => LaporAduan::find()->where(['status' => 'laporanbaru'])->count(),
             'requestPembangunan' => RequestPembangunan::find()->where(['status' => 'requestbaru'])->count(),
