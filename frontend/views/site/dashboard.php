@@ -61,6 +61,24 @@ $this->title = 'Dashboard';
                                 <td>RtRw</td>
                                 <td>:  <?= $penduduk->getRtRw()->all()[0]['rw_parent'].'/'.$penduduk->getRtRw()->all()[0]['rt_child']; ?></td>
                             </tr>
+                            <?php if($mitra != null) { ?>
+                                <tr>
+                                    <td>nama mitra</td>
+                                    <td>:  <?= $mitra[0]['nama_mitra'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td>alamat</td>
+                                    <td>:  <?= $mitra[0]['alamat'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td>no telp</td>
+                                    <td>:  <?= $mitra[0]['no_telp'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>:  <?= $mitra[0]['email'] ?></td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 <?php }?>

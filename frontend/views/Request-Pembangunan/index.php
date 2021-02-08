@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             </th>
                             <td><?= $item['judul'] ?></td>
                             <td><?= $item['status'] ?></td>
-                            <td><?= $item['kategori_pembangunan_id'] ?></td>
+                            <td><?= $item->kategoriPembangunan->nama ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>

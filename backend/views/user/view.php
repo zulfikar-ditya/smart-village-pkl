@@ -30,7 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'roles_id',
+            [
+                'attribute' => 'roles',
+                'value' => function ($model) {
+                    return $model->roles->name;
+                }
+            ],
             'name',
             'username',
             'password',
@@ -40,7 +45,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'email:email',
             'photo',
             'last_login',
-            'penduduk_id',
+            [
+                'attribute' => 'punduduk',
+                'value' => function ($model) {
+                    return $model->penduduk->nama_lengkap;
+                }
+            ],
             'created_at',
             'updated_at',
         ],

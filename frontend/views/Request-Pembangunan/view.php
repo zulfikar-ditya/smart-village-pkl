@@ -34,7 +34,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'id',
                 'judul',
                 'deskripsi:ntext',
-                'kategori_pembangunan_id',
+                [
+                    'attribute' => 'kategori pembangunan',
+                    'value' => function ($model) {
+                        return $model->kategoriPembangunan->nama;
+                    }
+                ],
                 'status',
                 'created_at',
                 'updated_at',

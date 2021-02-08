@@ -70,10 +70,10 @@ class LaporAduan extends \yii\db\ActiveRecord
     }
     public function getUser()
     {
-        return $this->hasOne(UserAdmin::className(), ['id' => 'id']);
+        return $this->hasOne(UserAdmin::className(), ['id' => 'user_id']);
     }
     public function getPembangunan()
     {
-        return $this->hasOne(Pembangunan::className(), ['id' => 'id']);
+        return $this->hasOne(Pembangunan::className(), ['id' => 'pembangunan_id']);
     }
 }

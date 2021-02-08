@@ -32,21 +32,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'judul',
             'deskripsi:ntext',
-            // [ idk why doesnt work
-            //     'attribute' => 'user',
-            //     'value' => function ($model) {
-            //         // return var_dump(Html::encode($model->getUser()->all()));
-            //         return var_dump($model->getUser()->all());
-            //     }
-            // ],
-            'user_id',
-            'kategori_pembangunan_id',
-            // [
-            //     'attribute' => 'kategori pembangunan',
-            //     'value' => function($model) {
-            //         return Html::encode($model->getKategoriPembangunan()->all()[0]['nama']);
-            //     }
-            // ],
+            [
+                'attribute' => 'user',
+                'value' => function ($model) {
+                    return $model->user->username;
+                }
+            ],
+            [
+                'attribute' => 'kategori pembangunan',
+                'value' => function($model) {
+                    return $model->kategoriPembangunan->nama;
+                }
+            ],
             'status',
             'created_at',
             'updated_at',

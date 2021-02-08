@@ -37,21 +37,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['image', ['width' =>  '150px', 'height'=> '100px']],
             ],
             'deskripsi:ntext',
-            // [ idk now why doesnt work
-            //     'attribute' => 'user',
-            //     'value' => function ($model) {
-            //         return var_dump($model->getUser()->all());
-            //         // return Html::encode($model->getUser()->all()[0]['username']);
-            //     }
-            // ],
-            'user_id',
-            // [
-            //     'attribute' => 'user',
-            //     'value' => function ($model) {
-            //         return Html::encode($model->getPembangunan()->all()[0]['nama_pembangunan']);
-            //     }
-            // ],
-            'pembangunan_id',
+            [ // idk now why doesnt work
+                'attribute' => 'user',
+                'value' => function ($model) {
+                    return $model->user->username;
+                }
+            ],
+            [
+                'attribute' => 'pembangunan/ Id',
+                'value' => function ($model) {
+                    return $model->pembangunan->nama_pembangunan.' / '.$model->pembangunan->id;
+                }
+            ],
             'status',
             'created_at',
             'updated_at',

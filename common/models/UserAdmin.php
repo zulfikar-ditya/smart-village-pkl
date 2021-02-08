@@ -170,4 +170,9 @@ class UserAdmin extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Penduduk::className(), ['id' => 'penduduk_id']);
     }
+
+    public function getRoles()
+    {
+        return $this->hasOne(Roles::className(), ['id' => 'roles_id']);
+    }
 }

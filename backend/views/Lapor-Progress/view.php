@@ -38,13 +38,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'tanggal',
             'capaian_progress',
             'uraian_pekerjaan:ntext',
-            'pembangunan_id',
-            // [
-            //     'attribute' => 'Pembangunan Id',
-            //     'value' => function ($model) {
-            //         return Html::encode($model->getPembangunan()->all()[0]['nama_pembangunan']);
-            //     },
-            // ],
+            [
+                'attribute' => 'Pembangunan Id',
+                'value' => function ($model) {
+                    return Html::encode($model->getPembangunan()->all()[0]['nama_pembangunan']);
+                },
+            ],
         ],
     ]) ?>
 

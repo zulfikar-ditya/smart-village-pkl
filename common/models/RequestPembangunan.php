@@ -74,7 +74,7 @@ class RequestPembangunan extends \yii\db\ActiveRecord
      */
     public function getUser()
     {
-        return $this->hasOne(UserAdmin::className(), ['id' => 'id']);
+        return $this->hasOne(UserAdmin::className(), ['id' => 'user_id']);
     }
 
     /**
@@ -82,6 +82,6 @@ class RequestPembangunan extends \yii\db\ActiveRecord
      */
     public function getKategoriPembangunan()
     {
-        return $this->hasOne(KategoriPembangunan::className(), ['id' => 'id']);
+        return $this->hasOne(KategoriPembangunan::className(), ['id' => 'kategori_pembangunan_id']);
     }
 }

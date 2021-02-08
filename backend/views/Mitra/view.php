@@ -34,7 +34,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'alamat:ntext',
             'no_telp',
             'email:email',
-            'user_id',
+            [
+                'attribute' => 'username',
+                'value' => function ($model) {
+                    return $model->user->username;
+                }
+            ]
         ],
     ]) ?>
 

@@ -98,7 +98,7 @@ class Pembangunan extends \yii\db\ActiveRecord
      */
     public function getSumberDanaPembangunan()
     {
-        return $this->hasOne(SumberDanaPembangunan::className(), ['id' => 'id']);
+        return $this->hasOne(SumberDanaPembangunan::className(), ['id' => 'sumber_dana_pembangunan_id']);
     }
 
     /**
@@ -106,7 +106,7 @@ class Pembangunan extends \yii\db\ActiveRecord
      */
     public function getKategoriPembangunan()
     {
-        return $this->hasOne(KategoriPembangunan::className(), ['id' => 'id']);
+        return $this->hasOne(KategoriPembangunan::className(), ['id' => 'kategori_pembangunan_id']);
     }
 
     /**
@@ -114,7 +114,7 @@ class Pembangunan extends \yii\db\ActiveRecord
      */
     public function getStatusPembangunan()
     {
-        return $this->hasOne(StatusPembangunan::className(), ['id' => 'id']);
+        return $this->hasOne(StatusPembangunan::className(), ['id' => 'status_pembangunan_id']);
     }
 
     /**
@@ -122,7 +122,7 @@ class Pembangunan extends \yii\db\ActiveRecord
      */
     public function getUser()
     {
-        return $this->hasOne(UserAdmin::className(), ['id' => 'id']);
+        return $this->hasOne(UserAdmin::className(), ['id' => 'user_id']);
     }
 
     /**
@@ -130,6 +130,6 @@ class Pembangunan extends \yii\db\ActiveRecord
      */
     public function getMitra()
     {
-        return $this->hasOne(Mitra::className(), ['id' => 'id']);
+        return $this->hasOne(Mitra::className(), ['id' => 'mitra_id']);
     }
 }

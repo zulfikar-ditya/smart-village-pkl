@@ -87,6 +87,13 @@ class SiteController extends Controller
         } catch (InvalidArgumentException){
             $penduduk = null;
         }
+        try {
+            $mitra = \common\models\Mitra::find()
+            ->where(['user_id' => Yii::$app->user->identity->id])
+            ->all();
+        } catch (InvalidArgumentException){
+            $mitra = null;
+        }
         $dataPengumuman = Pengumuman::find();
         $pages = new \yii\data\Pagination([
                     'totalCount' => $dataPengumuman->count(),
@@ -96,6 +103,7 @@ class SiteController extends Controller
         return $this->render('dashboard', [
             'penduduk' => $penduduk,
             'pengumuman' => $models,
+            'mitra' => $mitra,
         ]);
     }
 

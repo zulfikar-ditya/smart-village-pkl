@@ -90,7 +90,7 @@ class Penduduk extends \yii\db\ActiveRecord
      */
     public function getAgama() 
     {
-        return $this->hasOne(Agama::className(), ['id' => 'id']);
+        return $this->hasOne(Agama::className(), ['id' => 'agama_id']);
     }
 
     /**
@@ -98,7 +98,7 @@ class Penduduk extends \yii\db\ActiveRecord
      */
     public function getPekerjaan() 
     {
-        return $this->hasOne(Pekerjaan::className(), ['id' => 'id']);
+        return $this->hasOne(Pekerjaan::className(), ['id' => 'pekerjaan_id']);
     }
 
     /**
@@ -106,7 +106,7 @@ class Penduduk extends \yii\db\ActiveRecord
      */
     public function getPendidikan()
     {
-        return $this->hasOne(Pendidikan::className(), ['id' => 'id']);
+        return $this->hasOne(Pendidikan::className(), ['id' => 'pendidikan_id']);
     }
 
     /**
@@ -114,6 +114,6 @@ class Penduduk extends \yii\db\ActiveRecord
      */
     public function getRtRw()
     {
-        return $this->hasOne(RtRw::className(), ['id' => 'id']);
+        return $this->hasOne(RtRw::className(), ['id' => 'rt_rw_id']);
     }
 }

@@ -39,7 +39,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     'format' => ['image', ['width' =>  '150px', 'height'=> '100px']],
                 ],
                 'deskripsi:ntext',
-                'pembangunan_id',
+                [
+                    'attribute' => 'pembangunan',
+                    'value' => function ($model) {
+                        return $model->pembangunan->nama_pembangunan;
+                    }
+                ],
                 'status',
                 'created_at',
                 'updated_at',
