@@ -84,14 +84,14 @@ class SiteController extends Controller
         $penduduk = null;
         try {
             $penduduk = Penduduk::findOne(Yii::$app->user->identity->penduduk_id);
-        } catch (InvalidArgumentException){
+        } catch (InvalidArgumentException $e){
             $penduduk = null;
         }
         try {
             $mitra = \common\models\Mitra::find()
             ->where(['user_id' => Yii::$app->user->identity->id])
             ->all();
-        } catch (InvalidArgumentException){
+        } catch (InvalidArgumentException $e){
             $mitra = null;
         }
         $dataPengumuman = Pengumuman::find();
