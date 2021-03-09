@@ -129,7 +129,7 @@ $this->title = 'Dashboard';
         <h3 class="text-center my-5">Pengumuman</h3>
         <table class="table p-5 shadow" style="padding: 3rem;">
             <thead class="text-uppercase">
-                <th>id</th>
+                <th>No</th>
                 <th>Isi</th>
                 <th>perihal</th>
                 <th>tanggal pengumuman</th>
@@ -140,13 +140,15 @@ $this->title = 'Dashboard';
                         <td><h1>None</h1></td>
                     </tr>
                 <?php } ?>
+                <?php $i = 1; ?>
                 <?php foreach ($pengumuman as $item) { ?>
                     <tr>
-                        <th><?= $item['id'] ?></th>
+                        <th><?= $i ?></th>
                         <td><?= $item['isi'] ?></td>
                         <td><?= $item['perihal'] ?></td>
                         <td><?= $item['tgl_pengumuman'] ?></td>
                     </tr>
+                    <?php $i++; ?>
                 <?php }?>
             </tbody>
         </table>

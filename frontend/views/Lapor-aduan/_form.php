@@ -20,10 +20,15 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'foto')->textInput(['type' => 'file']) ?>
         
             <?= $form->field($model, 'deskripsi')->textarea(['rows' => 6]) ?>
-        
-            <?= $form->field($model, 'pembangunan_id')->textInput() ?>
-        
-            <?= $form->field($model, 'status')->dropDownList([ 'diverifikasi' => 'Diverifikasi', 'ditolak' => 'Ditolak', 'dipending' => 'Dipending', 'laporanbaru' => 'Laporanbaru', ], ['prompt' => '']) ?>
+
+            <div class="form-group">
+                <label for="">Pembangunan</label>
+                <select name="LaporAduan[pembangunan_id]" id="" class="form-control" required>
+                    <?php foreach ($dataPembangunan as $item) { ?>
+                        <option value="<?= $item['id'] ?>"><?= $item['nama_pembangunan'] ?></option>
+                    <?php } ?>
+                </select>
+            </div>    
         
             <div class="row justify-content-center">
                 <?= Html::submitButton('Save', ['class' => 'btn bg-cyan']) ?>

@@ -35,32 +35,14 @@ class PembangunanController extends Controller
      */
     public function actionIndex()
     {
-        $data = Pembangunan::find()->orderBy(['id' => SORT_DESC])->one();
-        // return json_encode($data);
-        return var_dump($data);
-        // return var_dump(
-        //     [
-        //         'message' => true,
-        //         'data' => [
-        //             'id' => $data['id'],
-        //             'nama_pembangunan' => $data['nama_pembangunan'],
-        //             'foto' => $data['foto'],
-        //             'anggaran' => $data['anggaran'],
-        //             'tgl_mulai' => $data['tgl_mulai'],
-        //             'tgl_selesai' => $data['tgl_selesai'],
-        //             'longitude' => $data['longitude'],
-        //             'latitude' => $data['latitude'],
-        //             'prosentase' => $data['prosentase'],
-        //             'sumber_dana_pembangunan_id' => $data['sumber_dana_pembangunan_id'],
-        //             'kategori_pembangunan_id' => $data['kategori_pembangunan_id'],
-        //             'status_pembangunan_id' => $data['status_pembangunan_id'],
-        //             'users_id' => $data['user_id'],
-        //             'mitra_id' => $data['mitra_id'],
-        //             'created_at' => $data['created_at'],
-        //             'updated_at' => $data['updated_at'],
-        //         ],
-        //     ]
-        // );
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $data = (object)  Pembangunan::find()->orderBy(['id' => SORT_DESC])->all();
+        $data = (object)  Pembangunan::find()->all();
+        return [
+            'status' => true,
+            'message' => true,
+            'data' => $data,
+        ];
     }
 
     /**

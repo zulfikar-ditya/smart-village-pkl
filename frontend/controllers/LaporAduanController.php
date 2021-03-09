@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use common\models\LaporAduan;
 use common\models\Query\LaporAduanSearch;
+use common\models\Pembangunan;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -85,12 +86,12 @@ class LaporAduanController extends Controller
     public function actionCreate()
     {
         $model = new LaporAduan();
-
+        $dataPembangunan = Pembangunan::find()->orderBy(['id' => SORT_DESC])->all();
         if (Yii::$app->request->isPost) {
             $request = Yii::$app->request->post('LaporAduan');
             $model->deskripsi = $request['deskripsi'];
             $model->pembangunan_id = $request['pembangunan_id'];
-            $model->status = $request['status'];
+            $model->status = 'laporanbaru';
             $model->user_id = Yii::$app->user->identity->id;
 
             $model->foto = UploadedFile::getInstance($model, 'foto');
@@ -106,6 +107,7 @@ class LaporAduanController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'dataPembangunan' => $dataPembangunan,
         ]);
     }
 

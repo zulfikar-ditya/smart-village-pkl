@@ -35,9 +35,9 @@ class KategoriPembangunanController extends Controller
      */
     public function actionIndex()
     {
-        $data = KategoriPembangunan::find()->orderBy(['id' => SORT_DESC])->one();
-        echo "<pre>";
-        return var_dump($data);
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $data = (object) KategoriPembangunan::find()->all();
+        return ['data' => $data];
     }
 
     /**

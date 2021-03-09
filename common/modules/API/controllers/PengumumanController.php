@@ -38,7 +38,7 @@ class PengumumanController extends Controller
         $data = Pengumuman::find()->ORDERBY(['id' => SORT_DESC])->one();
         return json_encode([
             'status' => true,
-            'message' => $data['isi'].' '.'('.$data['tgl_pengumuman'].')',
+            'message' => $data['isi'],
         ]);
     }
 

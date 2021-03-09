@@ -57,6 +57,27 @@ class LaporAduanController extends Controller
         ]);
     }
 
+    public function getCreateError($model) {
+        if(array_key_exists('foto', $model->getErrors())) {
+            return $model->getErrors()['foto'][0];
+        }
+        else if (array_key_exists('deskripsi', $model->getErrors())) {
+            return $model->getErrors()['deskripsi'][0];
+        }
+        else if (array_key_exists('user_id', $model->getErrors())) {
+            return $model->getErrors()['user_id'][0];
+        }
+        else if (array_key_exists('pembangunan_id', $model->getErrors())) {
+            return $model->getErrors()['pembangunan_id'][0];
+        }
+        else if (array_key_exists('status', $model->getErrors())) {
+            return $model->getErrors()['status'][0];
+        }
+        else {
+            return 'Some Error Happen While Submit New Data';
+        }
+    }
+
     /**
      * Creates a new LaporAduan model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -76,8 +97,8 @@ class LaporAduanController extends Controller
             if ($model->hasErrors()) {
                 return json_encode([
                     'status' => false,
-                    'message' => 'Some error happen',
-                ]);
+                    'message' => $this->getCreateError($model),
+                    ]);
             } else {
                 return json_encode([
                     'status' => true,

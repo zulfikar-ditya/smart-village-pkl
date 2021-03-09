@@ -12,9 +12,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id')->textInput() ?>
+    <!-- <?= $form->field($model, 'id')->textInput() ?> -->
 
-    <?= $form->field($model, 'foto')->textInput(['maxlength' => true]) ?>
+    <!-- <?= $form->field($model, 'foto')->textInput(['maxlength' => true]) ?> -->
 
     <?= $form->field($model, 'deskripsi')->textarea(['rows' => 6]) ?>
 
@@ -24,9 +24,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'status')->dropDownList([ 'diverifikasi' => 'Diverifikasi', 'ditolak' => 'Ditolak', 'dipending' => 'Dipending', 'laporanbaru' => 'Laporanbaru', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+    <!-- <?= $form->field($model, 'created_at')->textInput() ?> -->
 
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <!-- <?= $form->field($model, 'updated_at')->textInput() ?> -->
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

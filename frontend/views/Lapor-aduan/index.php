@@ -25,21 +25,21 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="table-responsice table-hover">
             <table class="table text-capitalize">
                 <thead>
-                    <th>id</th>
+                    <th>No</th>
                     <th>deskripsi</th>
-                    <th>pembangunan id</th>
                     <th>status</th>
                 </thead>
                 <tbody>
+                <?php $i = 1; ?>
                     <?php foreach ($data as $item) { ?>
                         <tr>
                             <th>
-                                <?= Html::a($item['id'], ['lapor-aduan/view', 'id' => $item['id']]) ?>
+                                <?= Html::a($i, ['lapor-aduan/view', 'id' => $item['id']]) ?>
                             </th>
                             <td><?= $item['deskripsi'] ?></td>
-                            <td><?= $item['pembangunan_id'] ?></td>
                             <td><?= $item['status'] ?></td>
                         </tr>
+                        <?php $i++; ?>
                     <?php }?>
                 </tbody>
             </table>
