@@ -65,3 +65,9 @@ http://localhost/yii/smart_village/backtend/web/
 - admin
 - operator
 > for accessing the backend pages
+
+
+## Android App
+```
+https://github.com/zulfikar-dityaa/android-smart-village
+```
