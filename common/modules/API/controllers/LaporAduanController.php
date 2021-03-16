@@ -91,6 +91,7 @@ class LaporAduanController extends Controller
             $request = Yii::$app->request->post('LaporAduan');
             $model->deskripsi = $request['deskripsi'];
             $model->pembangunan_id = $request['pembangunan_id'];
+            // $model->user_id = Yii::$app->user->id;
             $model->user_id = 1;
             $model->status = 'laporanbaru';
             $model->save();

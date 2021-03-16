@@ -33,7 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'roles',
                 'value' => function ($model) {
-                    return $model->roles->name;
+                    try {
+                        return $model->roles->name;                        
+                    } catch(Exception $e) {
+                        return "none";                        
+                    }
                 }
             ],
             'name',
@@ -48,7 +52,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'punduduk',
                 'value' => function ($model) {
-                    return $model->penduduk->nama_lengkap;
+                    try {
+                        return $model->penduduk->nama_lengkap;
+                    } catch (Exception $e) {
+                        return "none";
+                    }
                 }
             ],
             'created_at',

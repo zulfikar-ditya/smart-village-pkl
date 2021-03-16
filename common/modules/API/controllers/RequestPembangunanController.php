@@ -60,46 +60,24 @@ class RequestPembangunanController extends Controller
 
     public function getCreateError($model) 
     {
-        // try {
-        //     return $model->getErrors()['judul'][0];
-        // } catch (Error $e) {
-        //     continue;
-        // } finally {
-        //     continue;
-        // }
-        
-        // try{
-        //     return $model->getErrors()['deskripsi'][0];
-        // } catch (Error $e) {
-        //     continue;
-        // } finally {
-        //     continue;
-        // }
-
-        // try{
-        //     return $model->getErrors()['kategori_pembangunan_id'][0];
-        // } catch (Error $e) {
-        //     continue;
-        // } finally {
-        //     continue;
-        // }
-
-        // try{
-        //     return $model->getErrors()['status'][0];
-        // } catch (Error $e) {
-        //     continue;
-        // } finally {
-        //     continue;
-        // }
-
-        // try{
-        //     return $model->getErrors()['user_id'][0];
-        // } catch (Error $e) {
-        //     continue;
-        // } finally {
-        //     continue;
-        // }
-        // return 'some error happen';
+        if(array_key_exists('judul', $model->getErrors())) {
+            return $model->getErrors()['judul'][0];
+        }
+        else if (array_key_exists('deskripsi', $model->getErrors())) {
+            return $model->getErrors()['deskripsi'][0];
+        }
+        else if (array_key_exists('kategori_pembangunan_id', $model->getErrors())) {
+            return $model->getErrors()['kategori_pembangunan_id'][0];
+        }
+        else if (array_key_exists('user_id', $model->getErrors())) {
+            return $model->getErrors()['user_id'][0];
+        } 
+        else if (array_key_exists('status', $model->getErrors())) {
+            return $model->getErrors()['status'][0];
+        }
+        else {
+            return 'Some error happen';
+        }
     }
 
     /**
@@ -116,13 +94,14 @@ class RequestPembangunanController extends Controller
             $model->judul = $request['judul'];
             $model->deskripsi = $request['deskripsi'];
             $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
+            // $model->user_id = Yii::$app->user->id;
             $model->user_id = 1;
-            $model->status = 'Requestbaru';
+            $model->status = 'requestbaru';
             $model->save();
             if ($model->hasErrors()) {
                 return json_encode([
                     'status' => false,
-                    'message' => 'Some Error Happen',
+                    'message' => $this->getCreateError($model),
                 ]);
             } else {
                 return json_encode(

@@ -17,9 +17,17 @@ class AuthController extends Controller
     {
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return json_encode([
-                'status' => true
-            ]);
+        	if (Yii::$app->user->isGuest) {
+        		return json_encode([
+        			'status' => false,
+        			'message' => 'User Is Guest',
+        		]);
+        	} else {
+        		Yii::$app->session->open();
+	            return json_encode([
+	                'status' => true,
+	            ]);
+        	}
         }
         else {
             $model->password = '';

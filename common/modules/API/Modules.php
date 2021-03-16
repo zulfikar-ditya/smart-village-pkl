@@ -20,7 +20,7 @@ class Modules extends \yii\base\Module
     {
         parent::init();
         Yii::$app->request->enableCsrfValidation = false;
-        // Yii::$app->user->enableSession = false;
+        Yii::$app->user->enableSession = true;
         // custom initialization code goes here
     }
 }
