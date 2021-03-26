@@ -23,9 +23,12 @@ class AuthController extends Controller
         			'message' => 'User Is Guest',
         		]);
         	} else {
-        		Yii::$app->session->open();
 	            return json_encode([
 	                'status' => true,
+                    'id' => Yii::$app->user->identity->id,
+                    'username' => Yii::$app->user->identity->username,
+                    'access_token' => Yii::$app->user->identity->auth_key,
+                    'email' => Yii::$app->user->identity->email,
 	            ]);
         	}
         }
@@ -70,6 +73,23 @@ class AuthController extends Controller
         return $this->render('signup', [
             'model' => $model,
         ]);
+    }
+
+    public function actionGetUser()
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        if(Yii::$app->user->isGuest) {
+            return [
+                'username' => 'Failed to get username',
+                'email' => 'Failed to get email',
+            ];
+        } else {
+            return [
+                'username' => Yii::$app->user->identity->username,
+                'email' => Yii::$app->user->identity->email,
+                'session' => Yii::$app->session
+            ];
+        }
     }
 }
 

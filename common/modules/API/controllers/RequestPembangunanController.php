@@ -94,8 +94,11 @@ class RequestPembangunanController extends Controller
             $model->judul = $request['judul'];
             $model->deskripsi = $request['deskripsi'];
             $model->kategori_pembangunan_id = $request['kategori_pembangunan_id'];
-            // $model->user_id = Yii::$app->user->id;
-            $model->user_id = 1;
+            // try {
+                // $model->user_id = Yii::$app->user->id;
+            // } catch (exception $e) {
+                $model->user_id = 1;
+            // }
             $model->status = 'requestbaru';
             $model->save();
             if ($model->hasErrors()) {
